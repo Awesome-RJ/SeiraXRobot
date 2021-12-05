@@ -1,7 +1,7 @@
 {
-      "name": "Luna Robot",
+      "name": "Seira Robot",
       "description": "Telegram group management bot.",
-      "logo": "https://telegra.ph/file/5de0856707d87af934cb2.jpg",
+      "logo": "https://telegra.ph/file/94fe0d72ef53d42c18b1e.jpg",
       "keywords": [
          "telegram",
          "anime",
@@ -9,7 +9,7 @@
          "manager",
          "innexi"
       ],   
-   "repository": "https://github.com/zeinzo/LunaRobotV2.git",
+   "repository": "https://github.com/Dorimuhai/SeiraXRobot.git",
    "addons": [
       {
          "options": {
@@ -67,12 +67,12 @@
       },
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "tdrki_1"
+         "value": "xyzparvez"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to masha support than consider you made an enemy.",
          "required": true,
-         "value": "lunasupportgroup"
+         "value": "seirasupport"
       },
       "MONGO_DB_URI": {
          "description": "Required for database connections.",
