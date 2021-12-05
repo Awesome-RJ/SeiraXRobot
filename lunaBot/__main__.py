@@ -75,16 +75,19 @@ def get_readable_time(seconds: int) -> str:
 LUNA_IMG = "https://telegra.ph/file/7c3c26e0ed938aec91209.jpg"
 
 PM_START_TEXT = """
-**hey I am Luna Robot** [ㅤ](https://telegra.ph/file/1895e25b7f5e3e7bddfc4.jpg)
-️➖➖➖➖➖➖➖➖➖➖➖➖➖
-**I'm a Powerfull Group Manager Bot With Cool Modules. feel free to add me to your groups!**
-️➖➖➖➖➖➖➖➖➖➖➖➖➖
-☉ **Click the button below for more.**
+*Hello {} !*
+================================
+[⚡](https://telegra.ph/file/f6f6f873c0b3a7dfa3242.jpg) ʜᴇʟʟᴏ  ᴍʏ ɴᴀᴍᴇ ɪs ꜱᴇɪʀᴀ ʀᴏʙᴏᴛ
+================================
+ɪ'ᴍ ᴀ ᴀɴɪᴍᴇ ᴛʜᴇᴍᴇ ʙᴏᴛ ꜰᴏʀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀsɪʟʏ!
+ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ᴘᴀʀᴠᴇᴢ](https://t.me/xyzparvez)
+================================
+Hit the /help to see available command.
 """
 
 buttons = [
     [
-        InlineKeyboardButton(text="➕ Add Luna To Your group ➕", url="http://t.me/lunatapibot?startgroup=true"),
+        InlineKeyboardButton(text="➕ Add Seira To Your group ➕", url="http://t.me/SeiraXRobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="About", callback_data="luna_"),
@@ -95,13 +98,13 @@ buttons = [
     [
         
         InlineKeyboardButton(
-            text="❓ Help&Commands", callback_data="help_back"),
+            text="Help&Commands", callback_data="help_back"),
     ],
 ]
 
 
 HELP_STRINGS = """
-**Main commands:**  [ㅤ](https://telegra.ph/file/1895e25b7f5e3e7bddfc4.jpg)
+**Main commands:**  [ㅤ](https://telegra.ph/file/f6f6f873c0b3a7dfa3242.jpg)
 ❂ /start: Starts me! You've probably already used this.
 ❂ /help: Sends this message; I'll tell you more about myself.
 
@@ -111,7 +114,7 @@ If you want to report any bugs or need any help with setting up Alina, reach us 
 
 
 DONATE_STRING = """Hehe, senang mendengar Anda ingin menyumbang!
- [klick disini](https://t.me/zeinzo_1) ❤️
+ [klick disini](https://t.me/xyzparvez) ❤️
 """
 
 IMPORTED = {}
@@ -398,7 +401,7 @@ def luna_about_callback(update, context):
             f"\n\n1.) first, add me to your group.\n"
             f"2.) then promote me as admin and give all permissions except anonymous admin.\n"
             f"3.) after promoting me, type /reload in group to update the admin list.\n"
-            f"4.) add @LunaAssistant to your group or type /join to invite her.\n"
+            f"4.) add @seiramusicassisten to your group or type /join to invite her.\n"
             f"5.) turn on the video chat first before start to play music.\n"
             f"\n📌 if userbot doesn't join voice chat make sure voice chat is active, or type /leave then type /join again..",
             parse_mode=ParseMode.MARKDOWN,
@@ -476,8 +479,8 @@ def luna_about_callback(update, context):
         )
     elif query.data == "luna_credit":
         query.message.edit_text(
-            text=f"<b> `Cʀᴇᴅɪᴛ Fᴏʀ Lᴜɴᴀ Dᴇᴠ's` </b>\n"
-            f"\nHᴇʀᴇ Sᴏᴍᴇ Dᴇᴠᴇʟᴏᴘᴇʀs Hᴇʟᴘɪɴɢ Iɴ Mᴀᴋɪɴɢ Tʜᴇ Lᴜɴᴀ",
+            text=f"<b> `Cʀᴇᴅɪᴛ Fᴏʀ Seira Dᴇᴠ's` </b>\n"
+            f"\nHᴇʀᴇ Sᴏᴍᴇ Dᴇᴠᴇʟᴏᴘᴇʀs Hᴇʟᴘɪɴɢ Iɴ Mᴀᴋɪɴɢ Tʜᴇ Seira",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -488,6 +491,7 @@ def luna_about_callback(update, context):
                  [
                     InlineKeyboardButton(text="Yui", url="https://t.me/Badboyanim"),
                     InlineKeyboardButton(text="Luna", url="https://t.me/tdrki_1"),
+                    InlineKeyboardButton(text="Seira", url="https//t.me/xyzparvez"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="luna_basichelp"),
@@ -524,9 +528,9 @@ def luna_about_callback(update, context):
         query.message.edit_text(
             text=f"｢ Admin Permissions 」\n"
                      f"\nTo avoid slowing down, Luna caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), Luna will only find out ~10 minutes later.\n"
-                    f"\nIf you want to update them immediately, you can use the /admincache or /reload command, that'll force Luna to check who the admins are again and their permissions\n"
+                    f"\nIf you want to update them immediately, you can use the /admincache or /reload command, that'll force Seira to check who the admins are again and their permissions\n"
                     f"\nIf you are getting a message saying:\nYou must be this chat administrator to perform this action!\n"
-                    f"\nThis has nothing to do with Luna's rights; this is all about YOUR permissions as an admin. Luna respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with Luna. Similarly, to change Luna settings, you need to have the Change group info permission.\n"
+                    f"\nThis has nothing to do with Luna's rights; this is all about YOUR permissions as an admin. Seira respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with Luna. Similarly, to change Luna settings, you need to have the Change group info permission.\n"
                     f"\nThe message very clearly states that you need these rights - not Luna.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -578,9 +582,9 @@ def luna_about_callback(update, context):
 
     elif query.data == "luna_angjay":
         query.message.edit_text(
-            text=f"Luna is a powerful bot for managing groups with additional features.\n"
-              f"\nLuna's Licensed Under The GNU (General Public License v3.0)\n"
-              f"\nIf you have any question about Luna,"
+            text=fSeira is a powerful bot for managing groups with additional features.\n"
+              f"\nSeira's Licensed Under The GNU (General Public License v3.0)\n"
+              f"\nIf you have any question about Seira,"
               f"\nreach us at Support Chat.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -588,7 +592,7 @@ def luna_about_callback(update, context):
                 [
                   [
                      InlineKeyboardButton(text="Back", callback_data="luna_puqi"),
-                     InlineKeyboardButton(text="☎️ Support", url=f"https://t.me/lunasupportgroup"),
+                     InlineKeyboardButton(text="Support", url=f"https://t.me/seirasupport"),
                   ]
                 ]
             ),
@@ -599,8 +603,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi.. ɪ'ᴀᴍ Lᴜɴᴀ*
-                 \nHere is the [sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ](https://www Xhamster.com) .""",
+            text=""" Hi.. i'am Seira*
+                 \nJoin GC Mutualan [ᴍᴇᴛᴀᴠᴇʀꜱᴇ](https://t.me/joinmetakak) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
