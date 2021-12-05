@@ -7,10 +7,10 @@
 <h4 align="center">A Powerful, Smart And Simple Group Manager <br> ... Written with AioGram , Pyrogram and Telethon...</h4>
 <p align='center'>
   <a href="https://www.python.org/" alt="made-with-python"> <img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg?style=flat-square&logo=python&color=blue" /> </a>
-  <a href="https://github.com/zeinzo/LunaRobotV2/graphs/commit-activity" alt="Maintenance"> <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square" /> </a>
-  <a href="https://t.me/lunaupdate"><img src="https://img.shields.io/badge/Join-Luna%20Updates-red.svg?logo=Telegram"></a>
-  <a href="https://t.me/lunasupportgroup"><img src="https://img.shields.io/badge/Join-Luna%20Support-blue.svg?logo=telegram"></a>
-  <a href="https://t.me/tdrki_1"><img src="https://img.shields.io/badge/Developer-Luna%20Robot-blue.svg?logo=telegram"></a>
+  <a href="https://github.com/Dorimuhai/SeiraXRobot/graphs/commit-activity" alt="Maintenance"> <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square" /> </a>
+  <a href="https://t.me/ParvezXProject"><img src="https://img.shields.io/badge/Join-Seira%20Updates-red.svg?logo=Telegram"></a>
+  <a href="https://t.me/seirasupport"><img src="https://img.shields.io/badge/Join-Seira%20Support-blue.svg?logo=telegram"></a>
+  <a href="https://t.me/xyzparvez"><img src="https://img.shields.io/badge/Developer-Seira%20Robot-blue.svg?logo=telegram"></a>
 
 
 ### Available on Telegram as [@SeiraXRobot](https://t.me/SeiraXRobot)
