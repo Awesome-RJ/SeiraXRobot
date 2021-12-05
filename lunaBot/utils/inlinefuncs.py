@@ -94,7 +94,7 @@ async def alive_function(answers):
     buttons = InlineKeyboard(row_width=2)
     bot_state = "Dead" if not await app.get_me() else "Alive"
     buttons.add(
-        InlineKeyboardButton("Main bot", url=f"https://t.me/lunatapibot"),
+        InlineKeyboardButton("Main bot", url=f"https://t.me/SeiraXRobot"),
         InlineKeyboardButton(
             "Go Inline!", switch_inline_query_current_chat=""
         ),
@@ -128,8 +128,8 @@ async def about_function(answers):
     buttons = InlineKeyboard(row_width=2)
     bot_state = "Dead" if not await app.get_me() else "About"
     buttons.add(
-        InlineKeyboardButton("Support", url=f"https://t.me/lunasupportgroup"),
-        InlineKeyboardButton("Channel", url=f"https://t.me/lunaupdate"),
+        InlineKeyboardButton("Support", url=f"https://t.me/seirasupport"),
+        InlineKeyboardButton("Channel", url=f"https://t.me/ParvezXProject"),
     )
 
     msg = f"""
