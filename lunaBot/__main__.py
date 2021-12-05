@@ -75,7 +75,7 @@ def get_readable_time(seconds: int) -> str:
 LUNA_IMG = "https://telegra.ph/file/7c3c26e0ed938aec91209.jpg"
 
 PM_START_TEXT = """
-[✪ ʜᴇʟʟᴏ  ᴍʏ ɴᴀᴍᴇ ɪs ꜱᴇɪʀᴀ ʀᴏʙᴏᴛ](https://telegra.ph/file/81e28997dcd6153979fa7.jpg)
+✪ ʜᴇʟʟᴏ  ᴍʏ ɴᴀᴍᴇ ɪs ꜱᴇɪʀᴀ ʀᴏʙᴏᴛ [🌠](https://telegra.ph/file/81e28997dcd6153979fa7.jpg)
 ================================
 ✪ ɪ'ᴍ ᴀ ᴀɴɪᴍᴇ ᴛʜᴇᴍᴇ ʙᴏᴛ ꜰᴏʀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀsɪʟʏ!
 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ᴘᴀʀᴠᴇᴢ](https://t.me/xyzparvez)
@@ -903,7 +903,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I Aᴍ Aʟɪᴠᴇ 🔥")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Seira Robot Alive ⚡")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
