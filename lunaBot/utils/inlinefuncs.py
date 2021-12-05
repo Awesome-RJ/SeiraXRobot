@@ -101,14 +101,14 @@ async def alive_function(answers):
     )
 
     msg = f"""
-**[Luna❤️](https://t.me/lunatapibot):**
+**[Seira❤️](https://t.me/SeiraXRobot):**
 **RoBot:** `{bot_state}`
 **UserBot:** `Alive`
 **Python:** `{pyver.split()[0]}`
 **Pyrogram:** `{pyrover}`
 **MongoDB:** `{mongover}`
 **Platform:** `{sys.platform}`
-**Profiles:** [BOT](https://t.me/lunatapibot) | [UBOT](https://t.me/tdrki_1)
+**Profiles:** [BOT](https://t.me/SeiraXRobot) | [UBOT](https://t.me/xyzparvez)
 """
     answers.append(
         InlineQueryResultArticle(
@@ -133,14 +133,14 @@ async def about_function(answers):
     )
 
     msg = f"""
-[Luna ✨](https://t.me/lunatapibot) 
-   Maintained by [X](t.me/tdrki_1)
+[Seira⚡](https://t.me/SeiraXRobot) 
+   Maintained by [X](t.me/xyzparvez)
 Built with using python-telegram-bot v13.7 Running on Python 3.9.7
 """
     answers.append(
         InlineQueryResultArticle(
             title="About",
-            description="About Luna",
+            description="About Seira",
             thumb_url="https://telegra.ph/file/a03660425cd749faf0a4a.jpg",
             input_message_content=InputTextMessageContent(
                 msg, disable_web_page_preview=True
