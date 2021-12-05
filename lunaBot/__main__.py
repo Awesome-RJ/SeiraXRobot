@@ -72,7 +72,7 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-
+LUNA_IMG = "https://telegra.ph/file/7c3c26e0ed938aec91209.jpg"
 
 PM_START_TEXT = """
 ✪ ʜᴇʟʟᴏ  ᴍʏ ɴᴀᴍᴇ ɪs ꜱᴇɪʀᴀ ʀᴏʙᴏᴛ [🌠](https://telegra.ph/file/81e28997dcd6153979fa7.jpg)
@@ -221,10 +221,10 @@ def start(update: Update, context: CallbackContext):
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
             )
-        else:
-            update.effective_message.reply_text(
-            caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
-                uptime
+    else:
+        update.effective_message.reply_text(
+           LUNA_IMG, caption= "I'm awake already!\n<b>Haven't sleep since:</b> <code>{}</code>".format(
+               uptime
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
