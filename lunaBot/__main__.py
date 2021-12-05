@@ -75,14 +75,13 @@ def get_readable_time(seconds: int) -> str:
 LUNA_IMG = "https://telegra.ph/file/7c3c26e0ed938aec91209.jpg"
 
 PM_START_TEXT = """
-*Hello {} !*
 ================================
-[⚡](https://telegra.ph/file/f6f6f873c0b3a7dfa3242.jpg) ʜᴇʟʟᴏ  ᴍʏ ɴᴀᴍᴇ ɪs ꜱᴇɪʀᴀ ʀᴏʙᴏᴛ
+(https://telegra.ph/file/f6f6f873c0b3a7dfa3242.jpg) ✪ ʜᴇʟʟᴏ  ᴍʏ ɴᴀᴍᴇ ɪs ꜱᴇɪʀᴀ ʀᴏʙᴏᴛ
 ================================
-ɪ'ᴍ ᴀ ᴀɴɪᴍᴇ ᴛʜᴇᴍᴇ ʙᴏᴛ ꜰᴏʀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀsɪʟʏ!
+✪ ɪ'ᴍ ᴀ ᴀɴɪᴍᴇ ᴛʜᴇᴍᴇ ʙᴏᴛ ꜰᴏʀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀsɪʟʏ!
 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ᴘᴀʀᴠᴇᴢ](https://t.me/xyzparvez)
 ================================
-Hit the /help to see available command.
+✪ Hit the /help to see available command.
 """
 
 buttons = [
