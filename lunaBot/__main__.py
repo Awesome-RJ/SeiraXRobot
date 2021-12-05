@@ -582,7 +582,7 @@ def luna_about_callback(update, context):
 
     elif query.data == "luna_angjay":
         query.message.edit_text(
-            text=fSeira is a powerful bot for managing groups with additional features.\n"
+            text=f"Seira is a powerful bot for managing groups with additional features.\n"
               f"\nSeira's Licensed Under The GNU (General Public License v3.0)\n"
               f"\nIf you have any question about Seira,"
               f"\nreach us at Support Chat.",
