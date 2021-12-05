@@ -1,8 +1,8 @@
 
 
 <p align="center">
-  <img src="https://telegra.ph/file/e052e680ba705b7ed7be5.jpg">
-<h1 align="center"><b> Luna Robot </b></h1>
+  <img src="https://telegra.ph/file/f98a9ac0246a600e89f16.jpg">
+<h1 align="center"><b> Seira Robot </b></h1>
 </p>
 <h4 align="center">A Powerful, Smart And Simple Group Manager <br> ... Written with AioGram , Pyrogram and Telethon...</h4>
 <p align='center'>
@@ -13,20 +13,20 @@
   <a href="https://t.me/tdrki_1"><img src="https://img.shields.io/badge/Developer-Luna%20Robot-blue.svg?logo=telegram"></a>
 
 
-### Available on Telegram as [@lunatapibot](https://t.me/lunatapibot)
+### Available on Telegram as [@SeiraXRobot](https://t.me/SeiraXRobot)
 
 ### DEPLOY TO HEROKU⤵️
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/zeinzo/LunaRobotV2"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Dorimuhai/SeiraXRobot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 ```
-This Bot is Created by ZeinzoProject, If your kanging this without fork at least give a credit to get a smile of my hard work. 
+This Bot is Created by ParvezProject, If your kanging this without fork at least give a credit to get a smile of my hard work. 
 - LunaRobot
 - Innexia
+- SeiraXRobot
 ```
 
-## Credits Luna Robot💫
+## Credits Seira Robot💫
 
 - [Zeinzo](https://github/zeinzo) ``Dev``
-- [RIZ-EX](https://github.com/riz-ex) ``Dev``
-- [Arya](https://github.com/aryazakaria01) ``Contributor``
-- [Original Repo](https://github.com/TeamDeeCode/innexia) ``Innexia``
+- [Parvez](https://github.com/Dorimuhaj) ``Dev``
+- [Original Repo](https://github.com/Zeinzo/LunaRobotV2) ``Luna``
