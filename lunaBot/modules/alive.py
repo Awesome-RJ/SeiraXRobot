@@ -26,4 +26,4 @@ async def reload(event):
   tai = event.sender.first_name
   LUNA = "✅ **bot restarted successfully**\n\n• Admin list has been **updated**"
   BUTTON = [[Button.url("ᴜᴘᴅᴀᴛᴇs", "https://t.me/seirasupport")]]
-  await tbot.send_file(event.chat_id, PHOTO, caption=LUNA,  buttons=BUTTON)
+  await tbot.send_file(event.chat_id, caption=LUNA,  buttons=BUTTON)
