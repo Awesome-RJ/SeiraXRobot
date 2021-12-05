@@ -6,10 +6,10 @@ import aiohttp
 from googletrans import Translator as google_translator
 from pyrogram import filters
 from aiohttp import ClientSession
-from EmikoRobot import BOT_USERNAME as bu
-from EmikoRobot import BOT_ID, pbot, arq
-from EmikoRobot.ex_plugins.chatbot import add_chat, get_session, remove_chat
-from EmikoRobot.utils.pluginhelper import admins_only, edit_or_reply
+from LunaBot import BOT_USERNAME as bu
+from LunaBot import BOT_ID, pbot, arq
+from LunaBot.ex_plugins.chatbot import add_chat, get_session, remove_chat
+from LunaBot.utils.pluginhelper import admins_only, edit_or_reply
 
 url = "https://acobot-brainshop-ai-v1.p.rapidapi.com/get"
 
