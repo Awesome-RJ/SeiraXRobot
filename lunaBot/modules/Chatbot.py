@@ -8,7 +8,7 @@ from pyrogram import filters
 from aiohttp import ClientSession
 from lunaBot import BOT_USERNAME as bu
 from lunaBot import BOT_ID, pbot, arq
-from lunaBot.ex_plugin.chatbot import add chat, get_session, remove chat
+from lunaBot.ex_plugin.chatbot import add chat, remove chat
 from lunaBot.utils.pluginhelper import admins_only, edit_or_reply
 
 url = "https://acobot-brainshop-ai-v1.p.rapidapi.com/get"
