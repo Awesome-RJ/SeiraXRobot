@@ -265,7 +265,7 @@ def new_member(update: Update, context: CallbackContext):
            # make kontol asu
             elif new_mem.id == bot.id:
                 update.effective_message.reply_text(
-                        "❤️ <b>Thanks for adding me to the group!</b>\n\n<b>Promote me as administrator of the group, otherwise I will not be able to work properly.</b>",
+                        "❤️ <b>Thanks for adding Seira to the group!</b>\n\n<b>Promote me as administrator of the group, otherwise I will not be able to work properly.</b>",
                         reply_markup=InlineKeyboardMarkup(
                             [
                                 {
@@ -274,7 +274,7 @@ def new_member(update: Update, context: CallbackContext):
                                         switch_inline_query_current_chat=""),
                                     InlineKeyboardButton(
                                         text="sᴜᴘᴘᴏʀᴛ​",
-                                        url="https://t.me/lunasupportgroup",
+                                        url="https://t.me/seirasupport",
                                     )
                                 }
                             ]
