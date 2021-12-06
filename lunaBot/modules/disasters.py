@@ -628,10 +628,10 @@ def devlist(update: Update, context: CallbackContext):
 #  ❍ /gbanlist*:* Outputs a list of gbanned users
 
 # *Global Blue Text*
-#  ❍ /gignoreblue*:* <word>*:* Globally ignorea bluetext cleaning of saved word across lunaBot.
+#  ❍ /gignoreblue*:* <word>*:* Globally ignorea bluetext cleaning of saved word across NaoRobot.
 #  ❍ /ungignoreblue*:* <word>*:* Remove said command from global cleaning list
 
-# *luna Core*
+# *Nao Core*
 # *Owner only*
 #  ❍ /send*:* <module name>*:* Send module
 #  ❍ /install*:* <reply to a .py>*:* Install module 
@@ -678,7 +678,7 @@ dispatcher.add_handler(SUPPORTLIST_HANDLER)
 dispatcher.add_handler(SUDOLIST_HANDLER)
 dispatcher.add_handler(DEVLIST_HANDLER)
 
-__mod_name__ = "ᴅᴇᴠ"
+__mod_name__ = "Disasters"
 __handlers__ = [
     SUDO_HANDLER,
     SUPPORT_HANDLER,
