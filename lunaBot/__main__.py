@@ -78,7 +78,7 @@ PM_START_TEXT = """
 ✪ ʜᴇʟʟᴏ  ᴍʏ ɴᴀᴍᴇ ɪs ꜱᴇɪʀᴀ ʀᴏʙᴏᴛ [🌠](https://telegra.ph/file/81e28997dcd6153979fa7.jpg)
 ================================
 ✪ ɪ'ᴍ ᴀ ᴀɴɪᴍᴇ ᴛʜᴇᴍᴇ ʙᴏᴛ ꜰᴏʀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀsɪʟʏ!
-ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [ᴘᴀʀᴠᴇᴢ](https://t.me/xyzseth)
+ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [sᴇᴛʜ](https://t.me/xyzsethh)
 ================================
 ✪ Hit the /help to see available command.
 """
@@ -112,7 +112,7 @@ If you want to report any bugs or need any help with setting up Alina, reach us 
 
 
 DONATE_STRING = """Hehe, senang mendengar Anda ingin menyumbang!
- [klick disini](https://t.me/xyzparvez) ❤️
+ [klick disini](https://t.me/xyzsethh) ❤️
 """
 
 IMPORTED = {}
@@ -399,9 +399,9 @@ def luna_about_callback(update, context):
             f"\n\n1.) first, add me to your group.\n"
             f"2.) then promote me as admin and give all permissions except anonymous admin.\n"
             f"3.) after promoting me, type /reload in group to update the admin list.\n"
-            f"4.) add @seiramusicassisten to your group or type /join to invite her.\n"
+            f"4.) add @seiramusicassisten to your group .\n"
             f"5.) turn on the video chat first before start to play music.\n"
-            f"\n📌 if userbot doesn't join voice chat make sure voice chat is active, or type /leave then type /join again..",
+            f"\n📌 if userbot doesn't join voice chat make sure voice chat is active,.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -425,11 +425,10 @@ def luna_about_callback(update, context):
             text=f"**──「 Basic Guide 」──**"
             f"\n\n/play (song name) - play song from youtube"
             f"\n/ytp (song name) - play song directly from"
-            f"\nB/stream (reply to audio) - play song using audio file."
+            f"\nB/stream  (still update) (reply to audio) - play song using audio file."
             f"\n/playlist - show the list song in queue"
             f"\n/song (song name) - download song from youtube."
-            f"\n/search (video name) - search video from youtube detailed."
-            f"\n/lyric - (song name) lyrics scrapper",
+            f"\n/lyrics - (song name) lyrics scrapper",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
