@@ -96,8 +96,8 @@ if ENV:
     SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
     SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
-    ARQ_API_URL = "https://thearq.tech"
-    ARQ_API_KEY = "ZWXCEZ-RTVXHT-NOVURC-FHCFZD-ARQ"
+    ARQ_API_URL = "https://grambuilders.tech"
+    ARQ_API_KEY = "NFJXOE-QYYHED-NAITPG-CFGOKV-ARQ"
     LOG_GROUP_ID = os.environ.get("LOG_GROUP_ID", None)
     BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
 
