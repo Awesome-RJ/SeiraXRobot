@@ -38,7 +38,7 @@ def afk(update: Update, context: CallbackContext):
     sql.set_afk(update.effective_user.id, reason)
     fname = update.effective_user.first_name
     try:
-        update.effective_message.reply_text("{} is now away!{}".format(fname, notice))
+        update.effective_message.reply_text("{} orangnya lagi ga ada {}".format(fname, notice))
     except BadRequest:
         pass
 
@@ -58,14 +58,14 @@ def no_longer_afk(update: Update, context: CallbackContext):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "{} Sudah tersedia !!",
-                "{} Kembali 😎",
-                "{} Telah hadir !",
-                "{} udah Kembali !",
-                "{} Sekarang online !",
-                "{} Akhirnya kembali!",
+                "Yeay {} Sudah tersedia !!",
+                "Asik {} Kembali 😎",
+                "Yeay {} Telah hadir !",
+                "Asik {} udah Kembali !",
+                "Yes {} Sekarang online !",
+                "Bhaks {} Akhirnya kembali!",
                 "Selamat gabut lagi ! {}",
-                "Dimana si {}?\nya di sini!",
+                "Dimana si {}?\n ya di sini!",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
