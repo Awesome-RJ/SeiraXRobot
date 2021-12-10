@@ -9,7 +9,7 @@ from lunaBot import telethn as tbot
 
 PHOTO = "https://telegra.ph/file/7c3c26e0ed938aec91209.jpg"
 
-@MEMEK(pattern=("/mhelp"))
+@MEMEK(pattern=("/shelp"))
 async def awake(event):
   tai = event.sender.first_name
   LUNA = "** ──「 Basic Guide 」── ** \n\n"
