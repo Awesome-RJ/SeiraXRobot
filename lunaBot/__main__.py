@@ -416,7 +416,6 @@ def luna_about_callback(update, context):
                  
                  ]
                 ]
-            ),
         )
     elif query.data == "luna_admin":
         query.message.edit_text(
