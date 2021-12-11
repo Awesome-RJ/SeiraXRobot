@@ -28,5 +28,5 @@ This Bot is Created by ParvezProject, If your kanging this without fork at least
 ## Credits Seira Robot💫
 
 - [Zeinzo](https://github/zeinzo) ``Dev``
-- [Parvez](https://github.com/Dorimuhaj) ``Dev``
+- [Seth](https://github.com/Dorimuhaj) ``Dev``
 - [Original Repo](https://github.com/Zeinzo/LunaRobotV2) ``Luna``
