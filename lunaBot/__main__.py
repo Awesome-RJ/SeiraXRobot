@@ -88,7 +88,7 @@ buttons = [
         InlineKeyboardButton(text="➕ ᴛᴀᴍʙᴀʜ sᴇɪʀᴀ ᴋᴇ ɢʀᴜᴘ ᴀɴᴅᴀ​ ➕", url="http://t.me/SeiraXRobot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="Tentang Seira", callback_data="luna_"),
+        InlineKeyboardButton(text="ᴛᴇɴᴛᴀɴɢ sᴇɪʀᴀ​ 💜", callback_data="luna_"),
         InlineKeyboardButton(
             text="ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ​", callback_data="luna_basichelp"
         ),
@@ -406,11 +406,11 @@ def luna_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="📗 ᴘᴇɴɢɢᴜɴᴀᴀɴ ᴅᴀsᴀʀ​ ", callback_data="luna_admin"),
-                    InlineKeyboardButton(text="📘 ᴘᴇɴɢɢᴜɴᴀᴀɴ ᴘʀᴏ​ ", callback_data="luna_notes"),
+                    InlineKeyboardButton(text="📗 ᴅᴀsᴀʀ​ ", callback_data="luna_admin"),
+                    InlineKeyboardButton(text="📘 ᴘʀᴏ​ ", callback_data="luna_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="📙 ᴘᴇɴɢɢᴜɴᴀᴀɴ ᴀᴅᴍɪɴ​", callback_data="luna_support"),
+                    InlineKeyboardButton(text="📙 ᴀᴅᴍɪɴ​", callback_data="luna_support"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="luna_back"),
@@ -514,7 +514,7 @@ def luna_about_callback(update, context):
     elif query.data == "luna_asu":
         query.message.edit_text(
             text=f"｢ Perizinan Admin 」\n"
-                     f"\nUntuk menghindari perlambatan, Luna menyimpan hak admin untuk setiap pengguna. Cache ini berlangsung sekitar 10 menit; ini dapat berubah di masa mendatang. Ini berarti bahwa jika Anda mempromosikan pengguna secara manual (tanpa menggunakan perintah /promote), Luna akan  cari tahu saja ~10 menit kemudian.\n"
+                     f"\nUntuk menghindari perlambatan, Seira menyimpan hak admin untuk setiap pengguna. Cache ini berlangsung sekitar 10 menit; ini dapat berubah di masa mendatang. Ini berarti bahwa jika Anda mempromosikan pengguna secara manual (tanpa menggunakan perintah /promote), Seira akan  cari tahu saja ~10 menit kemudian.\n"
                      f"\nJika Anda ingin segera memperbaruinya, Anda dapat menggunakan perintah /admincache atau /reload, yang akan memaksa Seira untuk memeriksa lagi siapa adminnya dan izinnya\n"
                      f"\nJika Anda mendapatkan pesan yang mengatakan:\nAnda harus menjadi administrator obrolan ini untuk melakukan tindakan ini!\n"
                      f"\nIni tidak ada hubungannya dengan hak Seira; ini semua tentang izin ANDA sebagai admin. Seira menghormati izin admin; jika Anda tidak memiliki izin Larangan Pengguna sebagai admin telegram, Anda tidak akan dapat mencekal pengguna  dengan Seira. Demikian pula, untuk mengubah setelan seira, Anda harus memiliki izin Ubah info grup.\n"
