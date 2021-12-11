@@ -12,6 +12,7 @@
   <a href="https://t.me/seirasupport"><img src="https://img.shields.io/badge/Join-Seira%20Support-blue.svg?logo=telegram"></a>
   <a href="https://t.me/xyzparvez"><img src="https://img.shields.io/badge/Developer-Seira%20Robot-blue.svg?logo=telegram"></a>
 
+### [Baca Dalam Bahasa Indonesia 🇮🇩](https://github.com/Dorimuhai/SeiraXRobot/blob/master/README.ID.md)
 
 ### Available on Telegram as [@SeiraXRobot](https://t.me/SeiraXRobot)
 
