@@ -88,7 +88,7 @@ buttons = [
         InlineKeyboardButton(text="➕ ᴛᴀᴍʙᴀʜ sᴇɪʀᴀ ᴋᴇ ɢʀᴜᴘ ᴀɴᴅᴀ​ ➕", url="http://t.me/SeiraXRobot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="About", callback_data="luna_"),
+        InlineKeyboardButton(text="Tentang Seira", callback_data="luna_"),
         InlineKeyboardButton(
             text="Music Player", callback_data="luna_basichelp"
         ),
@@ -103,12 +103,11 @@ buttons = [
 
 HELP_STRINGS = """
 **Main commands:**  [ㅤ](https://telegra.ph/file/f6f6f873c0b3a7dfa3242.jpg)
-❂ /start: Starts me! ᴀɴᴅᴀ ᴍᴜɴɢᴋɪɴ sᴜᴅᴀʜ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ.
+❂ /start:ᴀɴᴅᴀ ᴍᴜɴɢᴋɪɴ sᴜᴅᴀʜ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ.
 ❂ /help: ᴍᴇɴɢɪʀɪᴍ ᴘᴇsᴀɴ ɪɴɪ; sᴀʏᴀ ᴀᴋᴀɴ ʙᴇʀᴄᴇʀɪᴛᴀ ʟᴇʙɪʜ ʙᴀɴʏᴀᴋ ᴛᴇɴᴛᴀɴɢ ᴅɪʀɪ sᴀʏᴀ​.
 
-All commands can either be used with / or !.
-If you want to report any bugs or need any help with setting up Seira, reach us at here"""
-
+Semua perintah dapat digunakan dengan / atau !.
+Jika Anda ingin melaporkan bug atau membutuhkan bantuan dalam menyiapkan Seira, hubungi kami di sini"""
 
 
 DONATE_STRING = """Hehe, senang mendengar Anda ingin menyumbang!
@@ -377,7 +376,7 @@ def luna_about_callback(update, context):
                             text="Panduan pengaturan", callback_data="luna_aselole"
                         ),
                         InlineKeyboardButton(
-                            text="T & C", callback_data="luna_puqi"
+                            text="syarat dan ketentuan", callback_data="luna_puqi"
                         ),
                     ],
                     [InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="luna_back")],
