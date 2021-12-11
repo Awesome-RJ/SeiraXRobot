@@ -423,12 +423,10 @@ def luna_about_callback(update, context):
     elif query.data == "luna_admin":
         query.message.edit_text(
             text=f"**──「 Basic Guide 」──**"
-            f"\n\n/play (song name) - play song from youtube"
-            f"\n/ytp (song name) - play song directly from"
-            f"\nB/stream  (still update) (reply to audio) - play song using audio file."
-            f"\n/playlist - show the list song in queue"
-            f"\n/song (song name) - download song from youtube."
-            f"\n/lyrics - (song name) lyrics scrapper",
+            f"\n/play (song name) - play song from youtube"
+            f"\n/play (reply to audio) - play song using audio file."
+            f"\n/playlist - play your playlist or group playlist."
+            f"\n/song (song name) - download song from youtube.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -439,10 +437,10 @@ def luna_about_callback(update, context):
     elif query.data == "luna_notes":
         query.message.edit_text(
             text=f"──「 Advanced CMD 」──\n\n"
-            f"/start (in group) - see the bot alive status"
+            f"\n/alive (in group) - see the bot alive status"
             f"\n/reload - reload bot and refresh the admin list"
             f"\n/ping - check the bot ping status"
-            f"\n/uptime - check the bot uptime status"
+            f"\n/bhaks - check the music ping status"
             f"\n/id - show the group/user id & other",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
@@ -452,18 +450,11 @@ def luna_about_callback(update, context):
     elif query.data == "luna_support":
         query.message.edit_text(
             text=f"──「 Admin CMD 」──\n"
-            f"\n/player - show the music playing status"
+            f"\n/play - (song name)/reply to audio file "
             f"\n/pause - pause the music streaming"
             f"\n/resume - resume the music was paused"
             f"\n/skip - skip to the next song"
-            f"\n/end - stop music streaming"
-            f"\n/join - invite userbot join to your group"
-            f"\n/leave - order the userbot to leave your group"
-            f"\n/auth - authorized user for using music bot"
-            f"\n/unauth - unauthorized for using music bot"
-            f"\n/control - open the player settings panel"
-            f"\n/delcmd (on | off) - enable / disable del cmd feature"
-            f"\n/music (on / off) - disable / enable music player in your group",
+            f"\n/end - stop music streaming",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
