@@ -75,17 +75,17 @@ def get_readable_time(seconds: int) -> str:
 LUNA_IMG = "https://telegra.ph/file/b05fb827470a67aeec05f.jpg"
 
 PM_START_TEXT = """
-✪ ʜᴇʟʟᴏ  ᴍʏ ɴᴀᴍᴇ ɪs ꜱᴇɪʀᴀ ʀᴏʙᴏᴛ [🌠](https://telegra.ph/file/81e28997dcd6153979fa7.jpg)
+✪ ʜᴀʟᴏ ɴᴀᴍᴀ sᴀʏᴀ sᴇɪʀᴀ ʀᴏʙᴏᴛ  [🇮🇩](https://telegra.ph/file/81e28997dcd6153979fa7.jpg)
 ================================
-✪ ɪ'ᴍ ᴀ ᴀɴɪᴍᴇ ᴛʜᴇᴍᴇ ʙᴏᴛ ꜰᴏʀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴇᴀsɪʟʏ!
+✪ sᴀʏᴀ ᴀᴅᴀʟᴀʜ ʙᴏᴛ ᴛᴇᴍᴀ ᴀɴɪᴍᴇ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴀɴᴅᴀ ᴅᴇɴɢᴀɴ ᴍᴜᴅᴀʜ!
 ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ [sᴇᴛʜ](https://t.me/xyzsethh)
 ================================
-✪ Hit the /help to see available command.
+✪ ᴛᴇᴋᴀɴ /help ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ᴘᴇʀɪɴᴛᴀʜ ʏᴀɴɢ ᴛᴇʀsᴇᴅɪᴀ​.
 """
 
 buttons = [
     [
-        InlineKeyboardButton(text="➕ Add Seira To Your group ➕", url="http://t.me/SeiraXRobot?startgroup=true"),
+        InlineKeyboardButton(text="➕ ᴛᴀᴍʙᴀʜ sᴇɪʀᴀ ᴋᴇ ɢʀᴜᴘ ᴀɴᴅᴀ​ ➕", url="http://t.me/SeiraXRobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="About", callback_data="luna_"),
@@ -96,18 +96,18 @@ buttons = [
     [
         
         InlineKeyboardButton(
-            text="Help&Commands", callback_data="help_back"),
+            text="Help&Perintah", callback_data="help_back"),
     ],
 ]
 
 
 HELP_STRINGS = """
 **Main commands:**  [ㅤ](https://telegra.ph/file/f6f6f873c0b3a7dfa3242.jpg)
-❂ /start: Starts me! You've probably already used this.
-❂ /help: Sends this message; I'll tell you more about myself.
+❂ /start: Starts me! ᴀɴᴅᴀ ᴍᴜɴɢᴋɪɴ sᴜᴅᴀʜ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ.
+❂ /help: ᴍᴇɴɢɪʀɪᴍ ᴘᴇsᴀɴ ɪɴɪ; sᴀʏᴀ ᴀᴋᴀɴ ʙᴇʀᴄᴇʀɪᴛᴀ ʟᴇʙɪʜ ʙᴀɴʏᴀᴋ ᴛᴇɴᴛᴀɴɢ ᴅɪʀɪ sᴀʏᴀ​.
 
 All commands can either be used with / or !.
-If you want to report any bugs or need any help with setting up Alina, reach us at here"""
+If you want to report any bugs or need any help with setting up Seira, reach us at here"""
 
 
 
@@ -360,21 +360,21 @@ def luna_about_callback(update, context):
     query = update.callback_query
     if query.data == "luna_":
         query.message.edit_text(
-            text="""Hi again! I'am a full-fledged group management bot built to help you manage your group easily.\n
-                    \nI can do lot of stuff, some of them are:
-                    \n• Restrict users who flood your chat using my anti-flood module.
-                    \n• Safeguard your group with the advanced and handy Antispam system.
-                    \n• Greet users with media + text and buttons, with proper formatting.
-                    \n• Save notes and filters with proper formatting and reply markup.\n
-                    \nNote: I need to be promoted with proper admin permissions to fuction properly.\n
-                    \nCheck Setup Guide to learn on setting up the bot and on help to learn more.""",
+            text="""Halo lagi!  Saya adalah bot manajemen grup lengkap yang dibuat untuk membantu Anda mengelola grup dengan mudah.\n
+                    \nSaya bisa melakukan banyak hal, beberapa di antaranya adalah:
+                    \n• Batasi pengguna yang membanjiri obrolan Anda menggunakan modul anti-banjir saya.
+                    \n• Lindungi grup Anda dengan sistem Antispam yang canggih dan praktis.
+                    \n• Sapa pengguna dengan media + teks dan tombol, dengan format yang tepat.
+                    \n• Simpan catatan dan filter dengan pemformatan dan markup balasan yang tepat..\n
+                    \nPenting!:Saya perlu dipromosikan dengan izin admin yang tepat agar berfungsi dengan baik.\n
+                    \nPeriksa Panduan Penyiapan untuk mempelajari cara menyiapkan bot dan bantuan untuk mempelajari lebih lanjut.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Setup Guide", callback_data="luna_aselole"
+                            text="Panduan pengaturan", callback_data="luna_aselole"
                         ),
                         InlineKeyboardButton(
                             text="T & C", callback_data="luna_puqi"
@@ -395,23 +395,23 @@ def luna_about_callback(update, context):
 
     elif query.data == "luna_basichelp":
         query.message.edit_text(
-            text=f"**──「 Basic Guide 」──**"
-            f"\n\n1.) first, add me to your group.\n"
-            f"2.) then promote me as admin and give all permissions except anonymous admin.\n"
-            f"3.) after promoting me, type /reload in group to update the admin list.\n"
-            f"4.) add @seiramusicassisten to your group .\n"
-            f"5.) turn on the video chat first before start to play music.\n"
-            f"\n📌 if userbot doesn't join voice chat make sure voice chat is active,.",
+            text=f"**──「 Penggunaan Dasar 」──**"
+            f"\n\n1.) Pertama, tambahkan saya ke grup anda.\n"
+            f"2.) kemudian promosikan saya sebagai admin dan berikan semua izin kecuali admin anonim.\n"
+            f"3.) setelah mempromosikan saya, ketik /reload di grup untuk memperbarui daftar admin.\n"
+            f"4.) Tambahkan @seiramusicassisten ke grup anda.\n"
+            f"5.) nyalakan obrolan video terlebih dahulu sebelum mulai memutar musik.\n"
+            f"\n📌 jika userbot(@seiramusikassisten) tidak join voice chat, pastikan voice chat aktif,.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="📗 Basic CMD", callback_data="luna_admin"),
-                    InlineKeyboardButton(text="📘 Advanced CMD", callback_data="luna_notes"),
+                    InlineKeyboardButton(text="📗  Penggunaan dasar ", callback_data="luna_admin"),
+                    InlineKeyboardButton(text="📘  Penggunaan Pro", callback_data="luna_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="📙 Admin CMD", callback_data="luna_support"),
+                    InlineKeyboardButton(text="📙 Penggunaan Admin", callback_data="luna_support"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="luna_back"),
@@ -422,11 +422,11 @@ def luna_about_callback(update, context):
         )
     elif query.data == "luna_admin":
         query.message.edit_text(
-            text=f"**──「 Basic Guide 」──**"
-            f"\n/play (song name) - play song from youtube"
-            f"\n/play (reply to audio) - play song using audio file."
-            f"\n/playlist - play your playlist or group playlist."
-            f"\n/song (song name) - download song from youtube.",
+            text=f"**──「 Penggunaan Dasar 」──**"
+            f"\n/play (nama lagu) - memutar musik dari youtube"
+            f"\n/play (balas ke pesan audio) - memutar musik dari file audio."
+            f"\n/playlist - mainkan musik playlistmu atau playlist grup."
+            f"\n/song (nama lagu ) - mendownload lagu dari youtube.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -436,12 +436,12 @@ def luna_about_callback(update, context):
 
     elif query.data == "luna_notes":
         query.message.edit_text(
-            text=f"──「 Advanced CMD 」──\n\n"
-            f"\n/alive (in group) - see the bot alive status"
-            f"\n/reload - reload bot and refresh the admin list"
-            f"\n/ping - check the bot ping status"
-            f"\n/bhaks - check the music ping status"
-            f"\n/id - show the group/user id & other",
+            text=f"──「 Penggunaan Pro 」──\n\n"
+            f"\n/alive (di grup anda) - melihat bot altif atau tidak"
+            f"\n/reload - muat ulang bot dan segarkan daftar admin"
+            f"\n/ping - check bot ping status"
+            f"\n/bhaks - check musik ping status"
+            f"\n/id - melihat id grup / id pengguna",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="luna_basichelp")]]
@@ -449,12 +449,12 @@ def luna_about_callback(update, context):
         )
     elif query.data == "luna_support":
         query.message.edit_text(
-            text=f"──「 Admin CMD 」──\n"
-            f"\n/play - (song name) / reply to audio file "
-            f"\n/pause - pause the music streaming"
-            f"\n/resume - resume the music was paused"
-            f"\n/skip - skip to the next song"
-            f"\n/end - stop music streaming",
+            text=f"──「 Penggunaan Admin 」──\n"
+            f"\n/play - (nama lagu) / balas ke audio file "
+            f"\n/pause - pause musik yang sedang berputar"
+            f"\n/resume - melanjutkan musik yang Ter pause"
+            f"\n/skip - melewati ke lagu selanjutnya"
+            f"\n/end - stop musik yang sedang berputar",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -491,17 +491,17 @@ def luna_about_callback(update, context):
 
     elif query.data == "luna_aselole":
         query.message.edit_text(
-            text=f"｢ Setup Guide 」\n"
-                 f"\nYou can add me to your group by clicking this link and selecting the chat.\n"
-                 f"\nRead Admin Permissions and Anti-spam for basic info.\n"
-                 f"\nRead Detailed Setup Guide to learn about setting up the bot in detail. (Recommended)\n"
-                 f"\nIf you do need help with further instructions feel free to ask in @seirasupport.",
+            text=f"｢ Penggunaan Dasar 」\n"
+                 f"\nAnda dapat menambahkan saya ke grup Anda dengan mengeklik tautan ini dan memilih obrolan.\n"
+                 f"\nBaca Izin Admin dan Anti-spam untuk info dasar.\n"
+                 f"\nBaca Panduan Penyiapan Terperinci untuk mempelajari tentang penyiapan bot secara mendetail. (Disarankan)\n"
+                 f"\nJika Anda membutuhkan bantuan dengan petunjuk lebih lanjut, silakan bertanya di @seirasupport.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins Permissions", callback_data="luna_asu"),
+                    InlineKeyboardButton(text="Perizinan Admin", callback_data="luna_asu"),
                     InlineKeyboardButton(text="Anti Spam", callback_data="luna_asi"),
                  ],
                  [
@@ -514,12 +514,12 @@ def luna_about_callback(update, context):
 
     elif query.data == "luna_asu":
         query.message.edit_text(
-            text=f"｢ Admin Permissions 」\n"
-                     f"\nTo avoid slowing down, Luna caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), Luna will only find out ~10 minutes later.\n"
-                    f"\nIf you want to update them immediately, you can use the /admincache or /reload command, that'll force Seira to check who the admins are again and their permissions\n"
-                    f"\nIf you are getting a message saying:\nYou must be this chat administrator to perform this action!\n"
-                    f"\nThis has nothing to do with Seira's rights; this is all about YOUR permissions as an admin. Seira respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with Luna. Similarly, to change Luna settings, you need to have the Change group info permission.\n"
-                    f"\nThe message very clearly states that you need these rights - not Seira.",
+            text=f"｢ Perizinan Admin 」\n"
+                     f"\nUntuk menghindari perlambatan, Luna menyimpan hak admin untuk setiap pengguna. Cache ini berlangsung sekitar 10 menit; ini dapat berubah di masa mendatang. Ini berarti bahwa jika Anda mempromosikan pengguna secara manual (tanpa menggunakan perintah /promote), Luna akan  cari tahu saja ~10 menit kemudian.\n"
+                     f"\nJika Anda ingin segera memperbaruinya, Anda dapat menggunakan perintah /admincache atau /reload, yang akan memaksa Seira untuk memeriksa lagi siapa adminnya dan izinnya\n"
+                     f"\nJika Anda mendapatkan pesan yang mengatakan:\nAnda harus menjadi administrator obrolan ini untuk melakukan tindakan ini!\n"
+                     f"\nIni tidak ada hubungannya dengan hak Seira; ini semua tentang izin ANDA sebagai admin. Seira menghormati izin admin; jika Anda tidak memiliki izin Larangan Pengguna sebagai admin telegram, Anda tidak akan dapat mencekal pengguna  dengan Luna. Demikian pula, untuk mengubah setelan seira, Anda harus memiliki izin Ubah info grup.\n"
+                     f"\nPesan tersebut dengan sangat jelas menyatakan bahwa Anda memerlukan hak-hak ini - bukan Seira.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -531,13 +531,13 @@ def luna_about_callback(update, context):
         query.message.edit_text(
             text=f"｢ Anti-Spam Settings 」\n"
                      f"\nAntispam: "
-                     f"\nBy enabling this, you can protect your groups free from scammers/spammers.\nRun /antispam on in your chat to enable.\nAppeal Chat: @seirasupport\n"
-                     f"\n✪ Anti-Flood allows you to keep your chat clean from flooding."
-                     f"\n✪ With the help of Blaclists you can blacklist words,sentences and stickers which you don't want to be used by group members."
-                     f"\n✪ By enabling Reports, admins get notified when users reports in chat."
-                     f"\n✪ Locks allows you to lock/restrict some comman items in telegram world."
-                     f"\n✪ Warnings allows to warn users and set auto-warns. "
-                     f"\n✪ Welcome Mute helps you prevent spambots or users flooding/spamming your group. Checl Greetings for more info",
+                       \nDengan mengaktifkan ini, Anda dapat melindungi grup Anda bebas dari scammer/spammer.\nJalankan /antispam di chat Anda untuk mengaktifkannya.\nSupport Chat: @seirasupport\n"
+                      f"\n✪ Anti-Spam memungkinkan Anda menjaga obrolan tetap bersih dari spam."
+                      f"\n✪ Dengan bantuan Blaclists, Anda dapat memasukkan kata, kalimat, dan stiker ke daftar hitam yang tidak ingin digunakan oleh anggota grup."
+                      f"\n✪ Dengan mengaktifkan Laporan, admin mendapatkan pemberitahuan saat pengguna melaporkan dalam obrolan."
+                      f"\n✪ Kunci memungkinkan Anda untuk mengunci/membatasi beberapa item perintah di dunia telegram."
+                      f"\n✪ Peringatan memungkinkan untuk memperingatkan pengguna dan mengatur peringatan otomatis. "
+                      f"\n✪ Welcome Mute membantu Anda mencegah spambot atau pengguna membanjiri/mengirim spam ke grup Anda. Periksa greeting untuk info lebih lanjut",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -547,15 +547,15 @@ def luna_about_callback(update, context):
 
     elif query.data == "luna_puqi":
         query.message.edit_text(
-            text=f" ｢ Terms and Conditions 」\n"
-                f"\nTo use this bot, You need to agree with Terms and Conditions.\n"
-                f"\n✪ If someone is spamming your group, you can use report feature from your Telegram Client."
-                f"\n✪ Make sure antiflood is enabled, so that users cannot flood/spam your chat."
-                f"\n✪ Do not spam commands, buttons, or anything in bot PM, else you will be Ignored by bot or Gbanned."
-                f"\n✪ If you need to ask anything about this bot or you need help, reach us at @seirasupport"
-                f"\n✪ Make sure you read rules and follow them when you join Support Chat."
-                f"\n✪ Spamming in Support Chat, will reward you GBAN and reported to Telegram as well.\n"
-                f"\nTerms & Conditions can be changed anytime.",
+            text=f" ｢ Syarat dan ketentuan 」\n"
+                f"\nUntuk menggunakan bot ini, Anda harus menyetujui Persyaratan dan Ketentuan.\n"
+                 f"\n✪ Jika seseorang mengirim spam ke grup Anda, Anda dapat menggunakan fitur laporan dari Klien Telegram Anda."
+                 f"\n✪ Pastikan antiflood diaktifkan, sehingga pengguna tidak dapat membanjiri/spam chat Anda."
+                 f"\n✪ Jangan spam perintah, tombol, atau apa pun di bot PM, jika tidak Anda akan Diabaikan oleh bot atau Gbanned."
+                 f"\n✪ Jika Anda perlu menanyakan sesuatu tentang bot ini atau membutuhkan bantuan, hubungi kami di @seirasupport"
+                 f"\n✪ Pastikan Anda membaca aturan dan mengikutinya saat bergabung dengan Obrolan Dukungan."
+                 f"\n✪ Spamming di Support Chat, akan menghadiahi Anda GBAN dan dilaporkan ke Telegram juga.\n"
+                 f"\nSyarat & Ketentuan dapat diubah kapan saja.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -570,10 +570,10 @@ def luna_about_callback(update, context):
 
     elif query.data == "luna_angjay":
         query.message.edit_text(
-            text=f"Seira is a powerful bot for managing groups with additional features.\n"
-              f"\nSeira's Licensed Under The GNU (General Public License v3.0)\n"
-              f"\nIf you have any question about Seira,"
-              f"\nreach us at Support Chat.",
+            text=f"Seira adalah bot yang kuat untuk mengelola grup dengan fitur tambahan.\n"
+               f"\nLisensi Seira Di Bawah GNU (Lisensi Publik Umum v3.0)\n"
+               f"\nJika Anda memiliki pertanyaan tentang Seira,"
+               f"\nhubungi kami di Support Chat.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -703,7 +703,7 @@ def send_settings(chat_id, user_id, user=False):
             chat_name = dispatcher.bot.getChat(chat_id).title
             dispatcher.bot.send_message(
                 user_id,
-                text="Which module would you like to check {}'s settings for?".format(
+                text="module mana yang ingin anda check {}'s settings for?".format(
                     chat_name
                 ),
                 reply_markup=InlineKeyboardMarkup(
@@ -812,7 +812,7 @@ def get_settings(update: Update, context: CallbackContext):
     # ONLY send settings in PM
     if chat.type != chat.PRIVATE:
         if is_user_admin(chat, user.id):
-            text = "Click here to get this chat's settings, as well as yours."
+            text = "Click disini untuk mendapatkan chat's settings, Begitu juga milikmu."
             msg.reply_text(
                 text,
                 reply_markup=InlineKeyboardMarkup(
@@ -829,7 +829,7 @@ def get_settings(update: Update, context: CallbackContext):
                 ),
             )
         else:
-            text = "Click here to check your settings."
+            text = "Click di sini untuk  check your settings."
 
     else:
         send_settings(chat.id, user.id, True)
