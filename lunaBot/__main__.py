@@ -450,7 +450,7 @@ def luna_about_callback(update, context):
     elif query.data == "luna_support":
         query.message.edit_text(
             text=f"──「 Admin CMD 」──\n"
-            f"\n/play - (song name)/reply to audio file "
+            f"\n/play - (song name) / reply to audio file "
             f"\n/pause - pause the music streaming"
             f"\n/resume - resume the music was paused"
             f"\n/skip - skip to the next song"
