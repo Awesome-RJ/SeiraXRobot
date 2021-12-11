@@ -518,7 +518,7 @@ def luna_about_callback(update, context):
                      f"\nUntuk menghindari perlambatan, Luna menyimpan hak admin untuk setiap pengguna. Cache ini berlangsung sekitar 10 menit; ini dapat berubah di masa mendatang. Ini berarti bahwa jika Anda mempromosikan pengguna secara manual (tanpa menggunakan perintah /promote), Luna akan  cari tahu saja ~10 menit kemudian.\n"
                      f"\nJika Anda ingin segera memperbaruinya, Anda dapat menggunakan perintah /admincache atau /reload, yang akan memaksa Seira untuk memeriksa lagi siapa adminnya dan izinnya\n"
                      f"\nJika Anda mendapatkan pesan yang mengatakan:\nAnda harus menjadi administrator obrolan ini untuk melakukan tindakan ini!\n"
-                     f"\nIni tidak ada hubungannya dengan hak Seira; ini semua tentang izin ANDA sebagai admin. Seira menghormati izin admin; jika Anda tidak memiliki izin Larangan Pengguna sebagai admin telegram, Anda tidak akan dapat mencekal pengguna  dengan Luna. Demikian pula, untuk mengubah setelan seira, Anda harus memiliki izin Ubah info grup.\n"
+                     f"\nIni tidak ada hubungannya dengan hak Seira; ini semua tentang izin ANDA sebagai admin. Seira menghormati izin admin; jika Anda tidak memiliki izin Larangan Pengguna sebagai admin telegram, Anda tidak akan dapat mencekal pengguna  dengan Seira. Demikian pula, untuk mengubah setelan seira, Anda harus memiliki izin Ubah info grup.\n"
                      f"\nPesan tersebut dengan sangat jelas menyatakan bahwa Anda memerlukan hak-hak ini - bukan Seira.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -531,7 +531,7 @@ def luna_about_callback(update, context):
         query.message.edit_text(
             text=f"｢ Anti-Spam Settings 」\n"
                      f"\nAntispam: "
-                       \nDengan mengaktifkan ini, Anda dapat melindungi grup Anda bebas dari scammer/spammer.\nJalankan /antispam di chat Anda untuk mengaktifkannya.\nSupport Chat: @seirasupport\n"
+                      f"\nDengan mengaktifkan ini, Anda dapat melindungi grup Anda bebas dari scammer/spammer.\nJalankan /antispam di chat Anda untuk mengaktifkannya.\nSupport Chat: @seirasupport\n"
                       f"\n✪ Anti-Spam memungkinkan Anda menjaga obrolan tetap bersih dari spam."
                       f"\n✪ Dengan bantuan Blaclists, Anda dapat memasukkan kata, kalimat, dan stiker ke daftar hitam yang tidak ingin digunakan oleh anggota grup."
                       f"\n✪ Dengan mengaktifkan Laporan, admin mendapatkan pemberitahuan saat pengguna melaporkan dalam obrolan."
