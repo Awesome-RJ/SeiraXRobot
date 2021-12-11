@@ -407,7 +407,7 @@ def luna_about_callback(update, context):
                 [
                  [
                     InlineKeyboardButton(text="📗 ᴘᴇɴɢɢᴜɴᴀᴀɴ ᴅᴀsᴀʀ​ ", callback_data="luna_admin"),
-                    InlineKeyboardButton(text="📘 ᴘᴇɴɢɢᴜɴᴀᴀɴ ᴘʀᴏ​ ", callback_data="luna_notes")
+                    InlineKeyboardButton(text="📘 ᴘᴇɴɢɢᴜɴᴀᴀɴ ᴘʀᴏ​ ", callback_data="luna_notes"),
                  [
                     InlineKeyboardButton(text="📙 ᴘᴇɴɢɢᴜɴᴀᴀɴ ᴀᴅᴍɪɴ​", callback_data="luna_support"),
                  ],
