@@ -90,13 +90,13 @@ buttons = [
     [
         InlineKeyboardButton(text="Tentang Seira", callback_data="luna_"),
         InlineKeyboardButton(
-            text="Music Player", callback_data="luna_basichelp"
+            text="ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ​", callback_data="luna_basichelp"
         ),
     ],
     [
         
         InlineKeyboardButton(
-            text="Help&Perintah", callback_data="help_back"),
+            text="ʙᴀɴᴛᴜᴀɴ & ᴘᴇʀɪɴᴛᴀʜ​", callback_data="help_back"),
     ],
 ]
 
@@ -107,7 +107,7 @@ HELP_STRINGS = """
 ❂ /help: ᴍᴇɴɢɪʀɪᴍ ᴘᴇsᴀɴ ɪɴɪ; sᴀʏᴀ ᴀᴋᴀɴ ʙᴇʀᴄᴇʀɪᴛᴀ ʟᴇʙɪʜ ʙᴀɴʏᴀᴋ ᴛᴇɴᴛᴀɴɢ ᴅɪʀɪ sᴀʏᴀ​.
 
 Semua perintah dapat digunakan dengan / atau !.
-Jika Anda ingin melaporkan bug atau membutuhkan bantuan dalam menyiapkan Seira, hubungi kami di sini"""
+Jika Anda ingin melaporkan bug atau membutuhkan bantuan dalam menyiapkan Seira, hubungi kami di sini @SeiraSupport"""
 
 
 DONATE_STRING = """Hehe, senang mendengar Anda ingin menyumbang!
@@ -373,10 +373,10 @@ def luna_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Panduan pengaturan", callback_data="luna_aselole"
+                            text="ᴘᴀɴᴅᴜᴀɴ ᴘᴇɴɢᴀᴛᴜʀᴀɴ​", callback_data="luna_aselole"
                         ),
                         InlineKeyboardButton(
-                            text="syarat dan ketentuan", callback_data="luna_puqi"
+                            text="sʏᴀʀᴀᴛ & ᴋᴇᴛᴇɴᴛᴜᴀɴ​", callback_data="luna_puqi"
                         ),
                     ],
                     [InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="luna_back")],
@@ -406,11 +406,10 @@ def luna_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="📗  Penggunaan dasar ", callback_data="luna_admin"),
-                    InlineKeyboardButton(text="📘  Penggunaan Pro", callback_data="luna_notes"),
-                 ],
+                    InlineKeyboardButton(text="📗 ᴘᴇɴɢɢᴜɴᴀᴀɴ ᴅᴀsᴀʀ​ ", callback_data="luna_admin"),
+                    InlineKeyboardButton(text="📘 ᴘᴇɴɢɢᴜɴᴀᴀɴ ᴘʀᴏ​ ", callback_data="luna_notes")
                  [
-                    InlineKeyboardButton(text="📙 Penggunaan Admin", callback_data="luna_support"),
+                    InlineKeyboardButton(text="📙 ᴘᴇɴɢɢᴜɴᴀᴀɴ ᴀᴅᴍɪɴ​", callback_data="luna_support"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="luna_back"),
