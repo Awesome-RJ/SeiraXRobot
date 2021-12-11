@@ -637,32 +637,32 @@ def adminlist(update, context):
 
 
 __help__ = """
- ❍ /admins*:* list of admins in the chat
+ ✻  /admins: daftar admin di chat
 
-*Admins only:*
- ❍ /pin*:* silently pins the message replied to - add `'loud'` or `'notify'` to give notifs to users
- ❍ /unpin*:* unpins the currently pinned message
- ❍ /invitelink*:* gets invitelink
- ❍ /promote*:* promotes the user
- ❍ /demote*:* demotes the user
- ❍ /title <title here>*:* sets a custom title for an admin that the bot promoted
- ❍ /setgtitle <newtitle>*:* Sets new chat title in your group.
- ❍ /setgpic*:* As a reply to file or photo to set group profile pic!
- ❍ /delgpic*:* Same as above but to remove group profile pic.
- ❍ /setsticker*:* As a reply to some sticker to set it as group sticker set!
- ❍ /setdescription <description>*:* Sets new chat description in group.
- ❍ /admincache*:* force refresh the admins list
- ❍ /antispam <on/off/yes/no>*:* Will toggle our antispam tech or return your current settings.
- ❍ /del*:* deletes the message you replied to
- ❍ /purge*:* deletes all messages between this and the replied to message.
- ❍ /purge <integer X>*:* deletes the replied message, and X messages following it if replied to a message.
- ❍ /zombies: counts the number of deleted account in your group
- ❍ /zombies clean: Remove deleted accounts from group..
+ Hanya admin:
+ ✻ /pin: diam-diam menyematkan pesan yang dibalas - tambahkan 'keras' atau 'beri tahu' untuk memberikan pemberitahuan kepada pengguna
+ ✻ /unpin: melepas pin pesan yang saat ini disematkan
+ ✻ /invitelink: mendapat invitelink
+ ✻ /promote: mempromosikan pengguna
+ ✻ /demote: menurunkan pengguna
+ ✻ /title : menetapkan judul khusus untuk admin yang dipromosikan bot
+ ✻ /setgtitle : Menyetel judul obrolan baru di grup Anda.
+ ✻ /setgpic: Sebagai balasan ke file atau foto untuk mengatur gambar profil grup!
+ ✻ /delgpic: Sama seperti di atas tetapi untuk menghapus foto profil grup.
+ ✻ /setsticker: Sebagai balasan untuk beberapa stiker untuk ditetapkan sebagai set stiker grup!
+ ✻ /setdescription : Mengatur deskripsi obrolan baru dalam grup.
+ ✻ /admincache: paksa menyegarkan daftar admin
+ ✻ /antispam : Akan mengaktifkan teknologi antispam kami atau mengembalikan pengaturan Anda saat ini.
+ ✻ /del: menghapus pesan yang Anda balas
+ ✻ /purge: menghapus semua pesan antara ini dan pesan yang dibalas.
+ ✻ /purge : menghapus pesan yang dibalas, dan X pesan yang mengikutinya jika membalas pesan.
+ ✻ /zombies: menghitung jumlah akun yang dihapus di grup Anda
+ ✻ /zombies clean: Hapus akun yang dihapus dari grup..
 
-*Note:* Night Mode chats get Automatically closed at 12 am(IST)
-and Automatically openned at 6 am(IST) To Prevent Night Spams.
+ Catatan: Obrolan Mode Malam ditutup Secara otomatis pada pukul 12 pagi (IST)
+ dan Secara otomatis dibuka pada pukul 6 pagi (IST) Untuk Mencegah Spam Malam.
 
-⚠️ `Read from top`
+ ️⚠️ `Baca dari atas`
 """
 
 ADMINLIST_HANDLER = DisableAbleCommandHandler("admins", adminlist)
