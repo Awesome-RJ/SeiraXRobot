@@ -205,7 +205,7 @@ def anime(update: Update, context: CallbackContext):
             'variables': variables
         }).json()
     if 'errors' in json.keys():
-        update.effective_message.reply_text('Anime not found')
+        update.effective_message.reply_text('Anime tidak ditemukan')
         return
     if json:
         json = json['data']['Media']
@@ -308,7 +308,7 @@ def manga(update: Update, context: CallbackContext):
         }).json()
     msg = ''
     if 'errors' in json.keys():
-        update.effective_message.reply_text('Manga not found')
+        update.effective_message.reply_text('Manga tidak di temukan')
         return
     if json:
         json = json['data']['Media']
@@ -375,10 +375,10 @@ def user(update: Update, context: CallbackContext):
     try:
         user = jikan.user(search_query)
     except jikanpy.APIException:
-        update.effective_message.reply_text("Username not found.")
+        update.effective_message.reply_text("Username tidak di temukan.")
         return
 
-    progress_message = update.effective_message.reply_text("Searching.... ")
+    progress_message = update.effective_message.reply_text("Mencari.... ")
 
     date_format = "%Y-%m-%d"
     if user['image_url'] is None:
@@ -488,7 +488,7 @@ def button(update: Update, context: CallbackContext):
                 disable_web_page_preview=False)
             progress_message.delete()
         else:
-            query.answer("You are not allowed to use this.")
+            query.answer("Kamu tidak di izinkan untuk menggunakan ini!.")
 
 
 def site_search(update: Update, context: CallbackContext, site: str):
@@ -499,7 +499,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
     try:
         search_query = args[1]
     except IndexError:
-        message.reply_text("Give something to search")
+        message.reply_text("Berikan sesuatu untuk di cari")
         return
 
     if site == "kaizoku":
@@ -560,17 +560,17 @@ def kayo(update: Update, context: CallbackContext):
 
 
 __help__ = """
-Get information about anime, manga or characters from [AniList](anilist.co).
-*Available commands:*
- • `/anime <anime>`*:* returns information about the anime.
- • `/character <character>`*:* returns information about the character.
- • `/manga <manga>`*:* returns information about the manga.
- • `/user <user>`*:* returns information about a MyAnimeList user.
- • `/upcoming`*:* returns a list of new anime in the upcoming seasons.
- • `/kaizoku <anime>`*:* search an anime on animekaizoku.com
- • `/kayo <anime>`*:* search an anime on animekayo.com
- • `/airing <anime>`*:* returns anime airing info.
- • /whatanime - reply to gif or video
+Dapatkan informasi tentang anime, manga, atau karakter dari [AniList](anilist.co).
+ *Perintah yang tersedia:*
+  • /anime <anime>: mengembalikan informasi tentang anime.
+  • /character <character>: mengembalikan informasi tentang karakter.
+  • /manga <manga>: mengembalikan informasi tentang manga.
+  • /user <user>: mengembalikan informasi tentang pengguna MyAnimeList.
+  • /upcoming : menampilkan daftar anime baru di musim mendatang.
+  • /kaizoku <anime>: cari anime di animekaizoku.com
+  • /kayo <anime>: cari anime di animekayo.com
+  • /airing <anime>: mengembalikan info penayangan anime.
+  • /whatanime - membalas gif atau video
  """
 
 ANIME_HANDLER = DisableAbleCommandHandler("anime", anime)
