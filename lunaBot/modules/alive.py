@@ -17,13 +17,13 @@ async def awake(event):
   LUNA += "💎 **My Master : [ꜱᴇᴛʜ](https://t.me/xyzsethh)** \n\n"
   LUNA += f"💎 **Telethon Version : {tlhver}** \n\n"
   LUNA += f"💎 **Pyrogram Version : {pyrover}** \n\n"
-  LUNA += "**Thanks For Adding Me Here ❤️**"
+  LUNA += "**Terima kasih sudah menambahkan Seira 💜**"
   BUTTON = [[Button.url("ʜᴇʟᴘ", "https://t.me/SeiraXRobot?start=help"), Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/seirasupport")]]
   await tbot.send_file(event.chat_id, PHOTO, caption=LUNA,  buttons=BUTTON)
 
 @MEMEK(pattern=("/reload"))
 async def reload(event):
   tai = event.sender.first_name
-  LUNA = "✅ **bot restarted successfully**\n\n• Admin list has been **updated**"
+  LUNA = "✅ **bot berhasil di restart**\n\n• Admin list telah di **perbarui**"
   BUTTON = [[Button.url("ᴜᴘᴅᴀᴛᴇs", "https://t.me/seirasupport")]]
   await tbot.send_file(event.chat_id, PHOTO, caption=LUNA,  buttons=BUTTON)
