@@ -257,9 +257,9 @@ def gban(update: Update, context: CallbackContext):
 
     if gban_time > 60:
         gban_time = round((gban_time / 60), 2)
-        message.reply_text("Done! Gbanned.", parse_mode=ParseMode.HTML)
+        message.reply_text("Jamet berhasil di tendang Bosque!.", parse_mode=ParseMode.HTML)
     else:
-        message.reply_text("Done! Gbanned.", parse_mode=ParseMode.HTML)
+        message.reply_text("Jamet berhasil di tendang Bosque!.", parse_mode=ParseMode.HTML)
 
     try:
         bot.send_message(
@@ -402,7 +402,7 @@ def gbanlist(update: Update, context: CallbackContext):
     for user in banned_users:
         banfile += f"[x] {user['name']} - {user['user_id']}\n"
         if user["reason"]:
-            banfile += f"Reason: {user['reason']}\n"
+            banfile += f"Karena: {user['reason']}\n"
 
     with BytesIO(str.encode(banfile)) as output:
         output.name = "gbanlist.txt"
