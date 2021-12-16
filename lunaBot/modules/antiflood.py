@@ -72,7 +72,7 @@ def check_flood(update, context) -> str:
         elif getmode == 4:
             bantime = extract_time(msg, getvalue)
             chat.kick_member(user.id, until_date=bantime)
-            execstrings = "Banned for {}".format(getvalue)
+            execstrings = "Di Banned untuk {}".format(getvalue)
             tag = "TBAN"
         elif getmode == 5:
             mutetime = extract_time(msg, getvalue)
@@ -82,7 +82,7 @@ def check_flood(update, context) -> str:
                 until_date=mutetime,
                 permissions=ChatPermissions(can_send_messages=False),
             )
-            execstrings = "Muted for {}".format(getvalue)
+            execstrings = "Mute selama {}".format(getvalue)
             tag = "TMUTE"
         send_message(
             update.effective_message, "Beep Boop! Boop Beep!\n{}!".format(execstrings)
@@ -101,13 +101,13 @@ def check_flood(update, context) -> str:
 
     except BadRequest:
         msg.reply_text(
-            "I can't restrict people here, give me permissions first! Until then, I'll disable anti-flood."
+            "Saya tidak bisa membatasi penggunaan di sini, beri seira izin dulu!  Sampai saat itu, seira akan menonaktifkan anti-flood."
         )
         sql.set_flood(chat.id, 0)
         return (
             "<b>{}:</b>"
             "\n#INFO"
-            "\nDon't have enough permission to restrict users so automatically disabled anti-flood".format(
+            "\nTidak memiliki izin yang cukup untuk membatasi pengguna sehingga anti-flood secara otomatis dinonaktifkan".format(
                 chat.title
             )
         )
@@ -136,7 +136,7 @@ def flood_button(update: Update, context: CallbackContext):
                 ),
             )
             update.effective_message.edit_text(
-                f"Unmuted by {mention_html(user.id, html.escape(user.first_name))}.",
+                f"Di Mute oleh {mention_html(user.id, html.escape(user.first_name))}.",
                 parse_mode="HTML",
             )
         except:
@@ -160,7 +160,7 @@ def set_flood(update, context) -> str:
         if update.effective_message.chat.type == "private":
             send_message(
                 update.effective_message,
-                "This command is meant to use in group not in PM",
+                "Perintah ini dimaksudkan untuk digunakan di grup bukan di PM",
             )
             return ""
         chat_id = update.effective_chat.id
@@ -172,7 +172,7 @@ def set_flood(update, context) -> str:
             sql.set_flood(chat_id, 0)
             if conn:
                 text = message.reply_text(
-                    "Antiflood has been disabled in {}.".format(chat_name)
+                    "Antiflood telah di nonaktifkan di {}.".format(chat_name)
                 )
             else:
                 text = message.reply_text("Antiflood has been disabled.")
@@ -183,10 +183,10 @@ def set_flood(update, context) -> str:
                 sql.set_flood(chat_id, 0)
                 if conn:
                     text = message.reply_text(
-                        "Antiflood has been disabled in {}.".format(chat_name)
+                        "Antiflood telah di nonaktifkan di {}.".format(chat_name)
                     )
                 else:
-                    text = message.reply_text("Antiflood has been disabled.")
+                    text = message.reply_text("Antiflood telah di nonaktifkan.")
                 return (
                     "<b>{}:</b>"
                     "\n#SETFLOOD"
@@ -200,7 +200,7 @@ def set_flood(update, context) -> str:
             elif amount <= 3:
                 send_message(
                     update.effective_message,
-                    "Antiflood must be either 0 (disabled) or number greater than 3!",
+                    "Antiflood harus 0 (disable) atau angka lebih besar dari 3!!",
                 )
                 return ""
 
@@ -208,19 +208,19 @@ def set_flood(update, context) -> str:
                 sql.set_flood(chat_id, amount)
                 if conn:
                     text = message.reply_text(
-                        "Anti-flood has been set to {} in chat: {}".format(
+                        "Anti-flood telah di set menjadi {} di group: {}".format(
                             amount, chat_name
                         )
                     )
                 else:
                     text = message.reply_text(
-                        "Successfully updated anti-flood limit to {}!".format(amount)
+                        "Berhasil updated anti-flood limit ke {}!".format(amount)
                     )
                 return (
                     "<b>{}:</b>"
                     "\n#SETFLOOD"
                     "\n<b>Admin:</b> {}"
-                    "\nSet antiflood to <code>{}</code>.".format(
+                    "\nSet antiflood ke <code>{}</code>.".format(
                         html.escape(chat_name),
                         mention_html(user.id, html.escape(user.first_name)),
                         amount,
@@ -228,11 +228,11 @@ def set_flood(update, context) -> str:
                 )
 
         else:
-            message.reply_text("Invalid argument please use a number, 'off' or 'no'")
+            message.reply_text("Argumen tidak valid, harap gunakan angka, 'off' or 'no'")
     else:
         message.reply_text(
             (
-                "Use `/setflood number` to enable anti-flood.\nOr use `/setflood off` to disable antiflood!."
+                "Gunakan `/setflood angka` untuk mengaktifkan anti-flood.\natau gunakan  `/setflood off` untuk menonaktifkan antiflood!."
             ),
             parse_mode="markdown",
         )
@@ -253,7 +253,7 @@ def flood(update, context):
         if update.effective_message.chat.type == "private":
             send_message(
                 update.effective_message,
-                "This command is meant to use in group not in PM",
+                "Perintah ini dimaksudkan untuk digunakan di group bukan di PM",
             )
             return
         chat_id = update.effective_chat.id
@@ -263,20 +263,20 @@ def flood(update, context):
     if limit == 0:
         if conn:
             text = msg.reply_text(
-                "I'm not enforcing any flood control in {}!".format(chat_name)
+                "Saya tidak menerapkan pengendalian anti-flood  di {}!".format(chat_name)
             )
         else:
-            text = msg.reply_text("I'm not enforcing any flood control here!")
+            text = msg.reply_text("Saya tidak menerapkan pengendalian anti-flood di sini!")
     else:
         if conn:
             text = msg.reply_text(
-                "I'm currently restricting members after {} consecutive messages in {}.".format(
+                "Saat ini saya membatasi anggota setelah {} berurutan di  {}.".format(
                     limit, chat_name
                 )
             )
         else:
             text = msg.reply_text(
-                "I'm currently restricting members after {} consecutive messages.".format(
+                "Saat ini saya membatasi anggota setelah {} pesan berurutan.".format(
                     limit
                 )
             )
@@ -299,7 +299,7 @@ def set_flood_mode(update, context):
         if update.effective_message.chat.type == "private":
             send_message(
                 update.effective_message,
-                "This command is meant to use in group not in PM",
+                "Perintah ini dimaksudkan untuk digunakan di group bukan di PM",
             )
             return ""
         chat = update.effective_chat
@@ -318,26 +318,26 @@ def set_flood_mode(update, context):
             sql.set_flood_strength(chat_id, 3, "0")
         elif args[0].lower() == "tban":
             if len(args) == 1:
-                teks = """It looks like you tried to set time value for antiflood but you didn't specified time; Try, `/setfloodmode tban <timevalue>`.
-Examples of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks."""
+                teks = """Sepertinya Anda mencoba mengatur nilai waktu untuk antiflood tetapi Anda tidak menentukan waktu; coba dengan, `/setfloodmode tban <timevalue>`.
+Contoh nilai waktu: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks."""
                 send_message(update.effective_message, teks, parse_mode="markdown")
                 return
-            settypeflood = "tban for {}".format(args[1])
+            settypeflood = "tban untuk {}".format(args[1])
             sql.set_flood_strength(chat_id, 4, str(args[1]))
         elif args[0].lower() == "tmute":
             if len(args) == 1:
                 teks = (
                     update.effective_message,
-                    """It looks like you tried to set time value for antiflood but you didn't specified time; Try, `/setfloodmode tmute <timevalue>`.
-Examples of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.""",
+                    """Sepertinya Anda mencoba mengatur nilai waktu untuk antiflood tetapi Anda tidak menentukan waktu; coba dengan, `/setfloodmode tmute <timevalue>`.
+Contoh nilai waktu: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.""",
                 )
                 send_message(update.effective_message, teks, parse_mode="markdown")
                 return
-            settypeflood = "tmute for {}".format(args[1])
+            settypeflood = "tmute untuk {}".format(args[1])
             sql.set_flood_strength(chat_id, 5, str(args[1]))
         else:
             send_message(
-                update.effective_message, "I only understand ban/kick/mute/tban/tmute!"
+                update.effective_message, "saya hanya mengerti ban/kick/mute/tban/tmute!"
             )
             return
         if conn:
@@ -348,14 +348,14 @@ Examples of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.
             )
         else:
             text = msg.reply_text(
-                "Exceeding consecutive flood limit will result in {}!".format(
+                "Melebihi batas anti-flood berturut-turut akan mengakibatkan{}!".format(
                     settypeflood
                 )
             )
         return (
             "<b>{}:</b>\n"
             "<b>Admin:</b> {}\n"
-            "Has changed antiflood mode. User will {}.".format(
+            "Telah menngubah antiflood mode. User akan {}.".format(
                 settypeflood,
                 html.escape(chat.title),
                 mention_html(user.id, html.escape(user.first_name)),
@@ -370,18 +370,18 @@ Examples of time value: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.
         elif getmode == 3:
             settypeflood = "mute"
         elif getmode == 4:
-            settypeflood = "tban for {}".format(getvalue)
+            settypeflood = "tban untuk {}".format(getvalue)
         elif getmode == 5:
-            settypeflood = "tmute for {}".format(getvalue)
+            settypeflood = "tmute untuk {}".format(getvalue)
         if conn:
             text = msg.reply_text(
-                "Sending more messages than flood limit will result in {} in {}.".format(
+                "Mengirim lebih banyak pesan melebihi limit flood akan mengakibatkan {} di {}.".format(
                     settypeflood, chat_name
                 )
             )
         else:
             text = msg.reply_text(
-                "Sending more message than flood limit will result in {}.".format(
+                "Mengirim lebih banyak pesan melebihi limit floor akan mengakibatkan {}.".format(
                     settypeflood
                 )
             )
@@ -395,30 +395,30 @@ def __migrate__(old_chat_id, new_chat_id):
 def __chat_settings__(chat_id, user_id):
     limit = sql.get_flood_limit(chat_id)
     if limit == 0:
-        return "Not enforcing to flood control."
+        return "Tidak menegakkan pengendalian anti-flood."
     else:
-        return "Antiflood has been set to`{}`.".format(limit)
+        return "Antiflood telah di set ke`{}`.".format(limit)
 
 
 __help__ = """
 
-*Blue text cleaner* removed any made up commands that people send in your chat.
- ❍ /cleanblue <on/off/yes/no>*:* clean commands after sending
- ❍ /ignoreblue <word>*:* prevent auto cleaning of the command
- ❍ /unignoreblue <word>*:* remove prevent auto cleaning of the command
- ❍ /listblue*:* list currently whitelisted commands
+*Pembersih text biru* menghapus semua perintah yang dibuat-buat dan dikirim user dalam obrolan Anda.
+ ❍ /cleanblue <on/off/yes/no>*:* menghapus perintah setelah mengirim
+ ❍ /ignoreblue <word>*:* mencegah pembersihan otomatis dari perintah
+ ❍ /unignoreblue <word>*:* menghapus dan mencegah pembersihan otomatis dari perintah
+ ❍ /listblue*:* daftar perintah yang saat ini masuk daftar putih
 
-*Antiflood* allows you to take action on users that send more than x messages in a row. Exceeding the set flood \
-will result in restricting that user.
- This will mute users if they send more than 10 messages in a row, bots are ignored.
- ❍ /flood*:* Get the current flood control setting
+*Antiflood* memungkinkan Anda untuk mengambil tindakan pada pengguna yang mengirim lebih dari x pesan berturut-turut.  Melebihi flood yang ditetapkan \
+ akan mengakibatkan pembatasan pengguna itu.
+ Ini akan membisukan pengguna jika mereka mengirim lebih dari 10 pesan berturut-turut, bot diabaikan.
+ ❍ /flood*:* Dapatkan pengaturan pengendalian flood saat ini
 • *Admins only:*
- ❍ /setflood <int/'no'/'off'>*:* enables or disables flood control
+ ❍ /setflood <int/'no'/'off'>*:* Mengaktifkan atau Menonaktifkan flood control
  *Example:* `/setflood 10`
- ❍ /setfloodmode <ban/kick/mute/tban/tmute> <value>*:* Action to perform when user have exceeded flood limit. ban/kick/mute/tmute/tban
+ ❍ /setfloodmode <ban/kick/mute/tban/tmute> <value>*:* Tindakan yang harus dilakukan ketika pengguna telah melampaui batas flood. ban/kick/mute/tmute/tban
 • *Note:*
- • Value must be filled for tban and tmute!!
- It can be:
+ • Angka harus diisi untuk tban dan tmute!!
+ Bisa jadi seperti:
  `5m` = 5 minutes
  `6h` = 6 hours
  `3d` = 3 days
