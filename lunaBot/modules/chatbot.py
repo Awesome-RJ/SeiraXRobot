@@ -3,7 +3,7 @@
 import emoji
 import re
 import aiohttp
-from googletrans import Translator
+from googletrans import Translator as google_translator
 from pyrogram import filters
 from aiohttp import ClientSession
 from lunaBot import BOT_USERNAME as luna
@@ -133,7 +133,7 @@ async def hmm(client, message):
         response = response.replace("9", "16")
         response = response.replace("I'm married to my job.", "I'm married with @xyzsethhh")
         response = response.replace("I'm single.", "My husband is @xyzsethhh")
-        response = response.replace("Srirabot.ai", "@seirasupport")
+        response = response.replace("Seirabot.ai", "@seirasupport")
         response = response.replace("I live in San Francisco, California.", "I live in @seirasupport.")
         response = response.replace("I made myself", "I was Created by @xyzsethhh")
         response = response.replace(
