@@ -3,7 +3,7 @@
 import emoji
 import re
 import aiohttp
-from googletrans import Translator as google_translator
+from googletrans import Translator
 from pyrogram import filters
 from aiohttp import ClientSession
 from lunaBot import BOT_USERNAME as luna
@@ -13,7 +13,7 @@ from lunaBot.pyrogramee.pluginshelper import admins_only, edit_or_reply
 
 url = "https://thearq.tech"
 
-translator = translator()
+translator = Translator()
 
 
 async def lunaQuery(query: str, user_id: int):
