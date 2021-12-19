@@ -3,7 +3,7 @@
 import emoji
 import re
 import aiohttp
-from googletrans import Translator as google_translator
+from googletrans import Translator
 from pyrogram import filters
 from aiohttp import ClientSession
 from lunaBot import BOT_USERNAME as luna
