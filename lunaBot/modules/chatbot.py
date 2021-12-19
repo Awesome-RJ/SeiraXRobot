@@ -8,7 +8,7 @@ from pyrogram import filters
 from aiohttp import ClientSession
 from lunaBot import BOT_USERNAME as luna
 from lunaBot import BOT_ID, pbot, arq
-from lunaRobot.ex_plugins.chatbot import add_chat, get_session, remove_chat
+from LunaRobot.ex_plugins.chatbot import add_chat, get_session, remove_chat
 from lunaBot.utils.pluginhelper import admins_only, edit_or_reply
 
 url = "https://thearq.tech"
