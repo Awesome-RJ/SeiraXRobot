@@ -22,7 +22,7 @@ psutil
 aiohttp
 Pillow
 CurrencyConverter
-googletrans
+googletrans==4.0.0-rc1
 jikanpy
 speedtest-cli
 coffeehouse
@@ -47,7 +47,7 @@ pretty_errors
 TgCrypto
 Pyrogram
 yt-dlp
-youtube_search_python
+youtube_search_python==1.4.9
 youtube_search
 asyncio
 dateparser
@@ -78,4 +78,4 @@ fuzzysearch
 Python_ARQ
 httpx[http2]
 gpytranslate
-google-trans-new
+google-trans-new==1.1.9
