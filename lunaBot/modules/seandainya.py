@@ -4,16 +4,15 @@ from lunaBot.events import telethn
 
 APAKAH_STRING = ["Haha Mimpi !", 
                  "Tidak Mungkin Besti😅", 
-                 "Iyaa,pasti terwujud aamiin✨", 
-                 "Heleh...Ngimpi !", 
-                 "70 % bisa lah..", 
+                 "Semoga yaa,pasti terwujud aamiin✨", 
+                 "Heleh...Ngimpi !",
                  "YUK BISA YUK , SEMANGAT 💜",
                  "NGGA MUNGKIN..HAHAHA",
                  "Ya Nda Tau Kok Tanya Seira",
                  "Pala bapak kau Kempes Xixixixi",
-                 "Coba lagi",
+                 "Mungkin..",
                  "Coba Tanya Admin 🤭"
-                 ]
+                ]
 
 
 @register(pattern="^/seandainya ?(.*)")
