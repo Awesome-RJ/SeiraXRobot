@@ -1,4 +1,4 @@
-from LunaBot.mongo import client as db_x
+from lunaBot.mongo import client as db_x
 
 lydia = db_x["CHATBOT"]
 
