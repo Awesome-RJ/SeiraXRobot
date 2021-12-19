@@ -13,7 +13,7 @@ from lunaBot.pyrogramee.pluginshelper import admins_only, edit_or_reply
 
 url = "https://thearq.tech"
 
-translator = Translator()
+translator = translator()
 
 
 async def lunaQuery(query: str, user_id: int):
