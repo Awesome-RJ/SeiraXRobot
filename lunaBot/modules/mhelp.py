@@ -15,7 +15,7 @@ async def awake(event):
    LUNA = "** Panduan Dasar \n\n"
    LUNA += "• /vplay (judul lagu) — Untuk memutar video streaming yang Anda minta melalui YouTube** \n"
    LUNA += "• /play (judul lagu/video) – Untuk memutar musik dari YouTube  \n"
-   LUNA += "• /vplaylist - menampilkan daftar video stream  dalam antrian \n"\n"
+   LUNA += "• /vplaylist - menampilkan daftar video stream  dalam antrian \n\n"
    LUNA += "** Admin CMD \n\n"
    LUNA += "• /pause - Untuk Menjeda playback Lagu** \n"
    LUNA += "• /resume - Untuk melanjutkan playback Lagu yang dijeda \n"
