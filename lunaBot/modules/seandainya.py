@@ -19,6 +19,6 @@ APAKAH_STRING = ["Haha Mimpi !",
 async def apakah(event):
     quew = event.pattern_match.group(1)
     if not quew:
-        await event.reply('seandainya tidak terdeteksi, coba lagi 😐')
+        await event.reply('seandainya apa boss?')
         return
     await event.reply(random.choice(APAKAH_STRING))
