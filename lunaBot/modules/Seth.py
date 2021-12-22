@@ -1,6 +1,6 @@
 __mod_name__ = "Tools"
 
-_help_ = """
+__help__ = """
 *Tools yang bisa di gunakan di Serira* :
 ★*Stickers*★
 • /getsticker <balas ke sticker> : mengubah sticker menjadi PNG file.
