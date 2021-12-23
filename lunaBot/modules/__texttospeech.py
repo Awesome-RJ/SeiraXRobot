@@ -11,7 +11,7 @@ from telethon.tl import types
 from telethon.tl.types import *
 
 from lunaBot import *
-from lunaBot import register
+
 from lunaBot import telethn as tbot
 
 
