@@ -6,16 +6,17 @@ __help__ = """
 • /getsticker <balas ke sticker> : mengubah sticker menjadi PNG file.
 • /kang <balas ke sticker> : membuat sticker pack anda lewat seira.
 • /stickers <masukan kata> : mencari sticker pack yang tersedia.
+• /delsticker <balas ke sticker> : menghapus sticker dari pack anda.
 • /q <balas ke pesan> : merubah pesan menjadi sticker.
 • /mmf <balas ke stiker> : menambahkan kalimat pada stiker,gunakan format " ; " untuk membuat tulisan dibawah.
 Contoh :
 [ ;Hai kak  ]
 
-★*Telegraph*
+★*Telegraph*★
 • /tm <balas ke media atau sticker> : mengubah gambar atau sticker menjadi link telegraph .
 • /txt <balas ke pesan> : mengubah pesan menjadi link telegraph.
 
-★*Search*
+★*Search*★
 • /img <masukan kata> : mencari gambar di google.
 • /reverse <balas ke media atau sticker> : mencari gambar yang bersangkutan di google.
 • /app <nama aplikasi> : mencari aplikasi di play store.
