@@ -2,7 +2,6 @@ __mod_name__ = "Translate"
 
 __help__ = """
 ★Translate★
-Berikut adalah bantuan untuk modul Translate:
 Seira dapat mengubah teks menjadi suara dan suara menjadi teks..
  
  Gunakan modul ini untuk menerjemahkan kata!
