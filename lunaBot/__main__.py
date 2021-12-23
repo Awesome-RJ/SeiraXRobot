@@ -422,9 +422,10 @@ def luna_about_callback(update, context):
     elif query.data == "luna_admin":
         query.message.edit_text(
             text=f"**──「 Penggunaan Dasar 」──**"
-            f"\n/play (nama lagu) - memutar musik dari youtube"
+            f"\n/play (nama lagu) - memutar musik atau dari youtube"
             f"\n/play (balas ke pesan audio) - memutar musik dari file audio."
             f"\n/playlist - mainkan musik playlistmu atau playlist grup."
+            f"\n/lyrics (nama lagu) - mencari lirik lagu."
             f"\n/song (nama lagu ) - mendownload lagu dari youtube.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -435,12 +436,12 @@ def luna_about_callback(update, context):
 
     elif query.data == "luna_notes":
         query.message.edit_text(
-            text=f"──「 Penggunaan Pro 」──\n\n"
-            f"\n/alive (di grup anda) - melihat bot altif atau tidak"
-            f"\n/reload - muat ulang bot dan segarkan daftar admin"
-            f"\n/ping - check bot ping status"
-            f"\n/bhaks - check musik ping status"
-            f"\n/id - melihat id grup / id pengguna",
+            text=f"──「Video player 」──\n\n"
+            f"\n/vplay  (nama lagu / link YouTube) – play video stream via YouTube."
+            f"\n/vpause - Untuk pause musik/video yang sedang di putar (hanya admin)."
+            f"\n/vstop atau /end - untuk memberhentikan video yang sedang di putar."
+            f"\n/bhaks - check musik/video stream ping status."
+            f"\n/skip - untuk melompat ke video selanjutnya.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="luna_basichelp")]]
