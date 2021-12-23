@@ -450,14 +450,27 @@ def makepack_internal(
     else:
         msg.reply_text("Failed to create sticker pack. Possibly due to blek mejik.")
 
+def delsticker(update, context):
+    msg = update.effective_message
+    if msg.reply_to_message and msg.reply_to_message.sticker:
+        file_id = msg.reply_to_message.sticker.file_id
+        context.bot.delete_sticker_from_set(file_id)
+        msg.reply_text("Deleted!")
+    else:
+        update.effective_message.reply_text(
+            "Please reply to sticker message to del sticker"
+        ) 
+
 
 __mod_name__ = "sᴛɪᴄᴋᴇʀ"
 STICKERID_HANDLER = DisableAbleCommandHandler("stickerid", stickerid)
 GETSTICKER_HANDLER = DisableAbleCommandHandler("getsticker", getsticker)
 KANG_HANDLER = DisableAbleCommandHandler("kang", kang, admin_ok=True)
 STICKERS_HANDLER = DisableAbleCommandHandler("stickers", cb_sticker)
+DEL_HANDLER = DisableAbleCommandHandler("delsticker", delsticker)
 
 dispatcher.add_handler(STICKERS_HANDLER)
 dispatcher.add_handler(STICKERID_HANDLER)
 dispatcher.add_handler(GETSTICKER_HANDLER)
 dispatcher.add_handler(KANG_HANDLER)
+dispatcher.add_handler(DEL_HANDLER)
