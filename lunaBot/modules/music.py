@@ -167,7 +167,7 @@ async def jssong(_, message):
 # Lyrics
 
 
-@app.on_message(filters.command("lyricz"))
+@app.on_message(filters.command("lyrics"))
 async def lyrics_func(_, message):
     if len(message.command) < 2:
         return await message.reply_text("**Usage:**\n/lyrics [QUERY]")
