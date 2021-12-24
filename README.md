@@ -1,7 +1,7 @@
 
 
 <p align="center">
-  <img src="https://telegra.ph/file/f98a9ac0246a600e89f16.jpg">
+  <img src="https://telegra.ph/file/76fb938029bfa76a43eb0.jpg">
 <h1 align="center"><b> Seira Robot </b></h1>
 </p>
 <h4 align="center">A Powerful, Smart And Simple Group Manager <br> ... Written with AioGram , Pyrogram and Telethon...</h4>
