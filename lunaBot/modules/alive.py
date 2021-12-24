@@ -7,7 +7,7 @@ from pyrogram import __version__ as pyrover
 from lunaBot.events import register as MEMEK
 from lunaBot import telethn as tbot
 
-PHOTO = "https://telegra.ph/file/79efca0d4f1a9e2bdf84d.jpg"
+PHOTO = "https://telegra.ph/file/9b9e97072f01ce23500ac.jpg"
 
 @MEMEK(pattern=("/alive"))
 async def awake(event):
