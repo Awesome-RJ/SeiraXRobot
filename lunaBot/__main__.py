@@ -105,13 +105,14 @@ HELP_STRINGS = """
 **Main commands:**  [ㅤ](https://telegra.ph/file/786d9e90c67bdd4f3d545.jpg)
 ❂ /start:ᴀɴᴅᴀ ᴍᴜɴɢᴋɪɴ sᴜᴅᴀʜ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ.
 ❂ /help: ᴍᴇɴɢɪʀɪᴍ ᴘᴇsᴀɴ ɪɴɪ; sᴀʏᴀ ᴀᴋᴀɴ ʙᴇʀᴄᴇʀɪᴛᴀ ʟᴇʙɪʜ ʙᴀɴʏᴀᴋ ᴛᴇɴᴛᴀɴɢ ᴅɪʀɪ sᴀʏᴀ​.
+❂ /donate: ᴀɴᴅᴀ ᴊᴜɢᴀ ᴅᴀᴘᴀᴛ ᴍᴇɴʏᴜᴍʙᴀɴɢ ᴋᴇᴘᴀᴅᴀ ᴏʀᴀɴɢ ʏᴀɴɢ sᴀᴀᴛ ɪɴɪ ᴍᴇɴᴊᴀʟᴀɴᴋᴀɴ sᴀʏᴀ ᴅɪ sɪɴɪ​.
 
 Semua perintah dapat digunakan dengan / atau !.
 Jika Anda ingin melaporkan bug atau membutuhkan bantuan dalam menyiapkan Seira, hubungi kami di sini @SeiraSupport"""
 
 
 DONATE_STRING = """Hehe, senang mendengar Anda ingin menyumbang!
- [klick disini](https://t.me/xyzsethh) ❤️
+ [klick disini](https://t.me/xyzsethhh) ❤️
 """
 
 IMPORTED = {}
@@ -845,7 +846,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1963422158 and DONATION_LINK:
+        if OWNER_ID != 2048978097 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
