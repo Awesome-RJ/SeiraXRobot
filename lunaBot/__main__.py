@@ -451,6 +451,7 @@ def luna_about_callback(update, context):
     elif query.data == "luna_support":
         query.message.edit_text(
             text=f"──「 Penggunaan Admin 」──\n"
+            f"\n/music on|off - untuk mengaktifkan atau menonaktifkan music player di grup anda"
             f"\n/play - (nama lagu) / balas ke audio file "
             f"\n/pause - pause musik yang sedang berputar"
             f"\n/resume - melanjutkan musik yang Ter pause"
