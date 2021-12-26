@@ -17,14 +17,14 @@ import emoji
 url = "https://thearq.tech"
 import re
 import aiohttp
-from googletrans import Translator as google_translator
+from googletrans import Translator
 from pyrogram import filters
 from lunaBot import BOT_ID, arq
 from lunaBot.helper_extra.aichat import add_chat, get_session, remove_chat
 from lunaBot.pyrogramee.pluginshelper import admins_only, edit_or_reply
 from lunaBot.pyrogramee.pyrogram import pbot as luna
 
-translator = google_translator()
+translator = Translator()
 
 
 async def lunaQuery(query: str, user_id: int):
