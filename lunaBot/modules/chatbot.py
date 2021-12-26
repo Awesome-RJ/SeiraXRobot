@@ -157,7 +157,7 @@ async def hmm(client, message):
 
         pro = response
         try:
-            await pbot.send_chat_action(message.chat.id, "typing")
+            await luna.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
         except CFError:
             return
@@ -249,7 +249,7 @@ async def hmm(client, message):
             except:
                 return
         try:
-            await pbot.send_chat_action(message.chat.id, "typing")
+            await luna.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
         except CFError:
             return
@@ -341,7 +341,7 @@ async def inuka(client, message):
         pro = translator.translate(pro, dest=lan)
         pro = pro.text
     try:
-        await pbot.send_chat_action(message.chat.id, "typing")
+        await luna.send_chat_action(message.chat.id, "typing")
         await message.reply_text(pro)
     except CFError:
         return
@@ -438,7 +438,7 @@ async def inuka(client, message):
         except Exception:
             return
     try:
-        await pbot.send_chat_action(message.chat.id, "typing")
+        await luna.send_chat_action(message.chat.id, "typing")
         await message.reply_text(pro)
     except CFError:
         return
