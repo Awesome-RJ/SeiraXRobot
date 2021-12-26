@@ -91,7 +91,7 @@ async def hmm(_, message):
         await message.reply_text("I only recognize `/chatbot on` and `chatbot off` only")
 
 
-@pbot.on_message(
+@luna.on_message(
     filters.text
     & filters.reply
     & ~filters.bot
@@ -255,7 +255,7 @@ async def hmm(client, message):
             return
 
 
-@pbot.on_message(filters.text & filters.private & ~filters.edited & filters.reply & ~filters.bot)
+@luna.on_message(filters.text & filters.private & ~filters.edited & filters.reply & ~filters.bot)
 async def inuka(client, message):
     msg = message.text
     if msg.startswith("/") or msg.startswith("@"):
@@ -347,7 +347,7 @@ async def inuka(client, message):
         return
 
 
-@pbot.on_message(filters.regex("Seira|Seira|robot|Seira|seth") & ~filters.bot & ~filters.via_bot  & ~filters.forwarded & ~filters.reply & ~filters.channel & ~filters.edited)
+@luna.on_message(filters.regex("Seira|Seira|robot|Seira|seth") & ~filters.bot & ~filters.via_bot  & ~filters.forwarded & ~filters.reply & ~filters.channel & ~filters.edited)
 async def inuka(client, message):
     msg = message.text
     if msg.startswith("/") or msg.startswith("@"):
