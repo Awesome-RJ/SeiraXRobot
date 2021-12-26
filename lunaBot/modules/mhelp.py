@@ -18,6 +18,7 @@ async def awake(event):
   LUNA += "• /playlist - **Untuk memutar playlist Anda atau playlist group anda** \n"
   LUNA += "• /song - ** (nama lagu) mendownload lagu via YouTube** \n\n"
   LUNA += "** ──「 Admin CMD 」── ** \n\n"
+  LUNA += "• /music on|off - **mengaktifkan atau menonaktifkan music player di grup anda** \n"
   LUNA += "• /pause atau /vpause - **Untuk pause musik/video yang sedang di putar** \n"
   LUNA += "• /resume atau /vresume - **Untuk melanjutkan musik/video yang sedang ter pause** \n"
   LUNA += "• /skip - **Untuk melewati lagu berikutnya** \n"
