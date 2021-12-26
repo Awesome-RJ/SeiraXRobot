@@ -55,7 +55,7 @@ ewe_chats = []
 en_chats = []
 
 
-@luna.on_message(filters.command(”chatbot") & ~filters.edited & ~filters.bot & ~filters.private)
+@luna.on_message(filters.command("chatbot") & ~filters.edited & ~filters.bot & ~filters.private)
 @admins_only
 async def hmm(_, message):
     global ewe_chats
