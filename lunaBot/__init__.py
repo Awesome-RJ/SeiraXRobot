@@ -221,14 +221,43 @@ else:
         LOGGER.warning("Can't connect to SpamWatch!")
 
 
-updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
-telethn = TelegramClient("luna", API_ID, API_HASH)
-pbot = Client("lunaBot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+from lunaBot.modules.sql import SESSION
+
+telegraph = Telegraph()
+telegraph.create_account(short_name="Seira")
+defaults = tg.Defaults(run_async=True)
+updater = tg.Updater(
+    token=TOKEN,
+    base_url=BOT_API_URL,
+    workers=min(32, os.cpu_count() + 4),
+    request_kwargs={"read_timeout": 10, "connect_timeout": 10},
+    use_context=True,
+    persistence=PostgresPersistence(session=SESSION),
+)
+# Telethon
+telethn = TelegramClient(MemorySession(), API_ID, API_HASH)
+# Dispacther
 dispatcher = updater.dispatcher
-print("[INFO]: INITIALZING AIOHTTP SESSION")
+session_name = TOKEN.split(":")[0]
+pgram = Client(
+    session_name,
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=TOKEN,
+)
+# AioHttp Session
 aiohttpsession = ClientSession()
-print("[INFO]: INITIALIZING ARQ CLIENT")
+# ARQ Client
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
+pbot = Client(
+    ":memory:",
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=TOKEN,
+    workers=min(32, os.cpu_count() + 4),
+)
+apps = []
+apps.append(pbot)
 loop = asyncio.get_event_loop()
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
