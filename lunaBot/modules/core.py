@@ -1,14 +1,14 @@
-from lunaBot import telethn as tbot
-from lunaBot.events import register
 import os
 import asyncio
 import os
 import time
 from datetime import datetime
+
+from lunaBot import telethn as tbot
+from lunaBot.events import register
 from lunaBot import OWNER_ID, DEV_USERS
 from lunaBot import TEMP_DOWNLOAD_DIRECTORY as path
-from lunaBot import TEMP_DOWNLOAD_DIRECTORY
-from datetime import datetime
+
 water = './lunaBot/resources/yone.jpg'
 client = tbot
 
@@ -34,5 +34,3 @@ async def Prof(event):
          )
     else:
         await event.reply("No File Found!")
-
-
