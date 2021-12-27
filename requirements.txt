@@ -81,3 +81,4 @@ gpytranslate
 google-trans-new
 pyrogram==1.2.20
 git+https://github.com/python-telegram-bot/ptbcontrib.git
+odmantic
