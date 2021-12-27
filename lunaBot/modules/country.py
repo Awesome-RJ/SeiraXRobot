@@ -1,9 +1,11 @@
+import flag
+import html
+import os
+
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
-import flag
-import html, os
 from countryinfo import CountryInfo
 from lunaBot import telethn as borg
 from lunaBot.events import register
@@ -101,9 +103,8 @@ Time Zones:- {tom}
 Top Level Domain:- {lanester}
 wikipedia:- {wiki}</b>
 
-Gathered By luna.</b>
+Gathered By SeiraXRobot.</b>
 """
-    
     
     await borg.send_message(
         event.chat_id,
