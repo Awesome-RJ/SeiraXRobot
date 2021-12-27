@@ -237,7 +237,7 @@ telegraph.create_account(short_name="Seira")
 defaults = tg.Defaults(run_async=True)
 updater = tg.Updater(
     token=TOKEN,
-    base_url=BOT_API_URL,
+    base_url=https://api.telegram.org/bot,
     workers=min(32, os.cpu_count() + 4),
     request_kwargs={"read_timeout": 10, "connect_timeout": 10},
     use_context=True,
