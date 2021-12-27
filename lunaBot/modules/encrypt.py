@@ -1,7 +1,9 @@
-from lunaBot import telethn as tbot
 import os
-from lunaBot.events import register
 import secureme
+
+from lunaBot import telethn as tbot
+from lunaBot.events import register
+
 
 @register(pattern="^/encrypt ?(.*)")
 async def hmm(event):
@@ -13,6 +15,7 @@ async def hmm(event):
     Text = cmd
     k = secureme.encrypt(Text)
     await event.reply(k)
+
 
 @register(pattern="^/decrypt ?(.*)")
 async def hmm(event):
