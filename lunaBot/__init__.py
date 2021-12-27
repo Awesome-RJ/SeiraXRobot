@@ -5,13 +5,22 @@ import sys
 import time
 import spamwatch
 import aiohttp
-from aiohttp import ClientSession
-
 import telegram.ext as tg
+
+from aiohttp import ClientSession
+from telethon.sessions import MemorySession
 from pyrogram import Client, errors
+from pyrogram.errors.exceptions.bad_request_400 import PeerIdInvalid, ChannelInvalid
+from pyrogram.types import Message
 from telethon import TelegramClient
 from Python_ARQ import ARQ
+from motor import motor_asyncio
+from odmantic import AIOEngine
+from pymongo import MongoClient
+from pymongo.errors import ServerSelectionTimeoutError
 from ptbcontrib.postgres_persistence import PostgresPersistence
+from telegram import Chat
+from telegraph import Telegraph
 
 StartTime = time.time()
 
