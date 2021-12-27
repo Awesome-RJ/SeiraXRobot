@@ -8,7 +8,7 @@ faker
 beautifulsoup4
 requests
 python-telegram-bot==13.9
-sqlalchemy==1.4.29
+SQLAlchemy==1.4.29
 ffmpeg-python
 psycopg2-binary
 feedparser
