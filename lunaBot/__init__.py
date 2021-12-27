@@ -1,4 +1,5 @@
 import logging
+import asyncio
 import os
 import sys
 import time
@@ -10,24 +11,41 @@ import telegram.ext as tg
 from pyrogram import Client, errors
 from telethon import TelegramClient
 from Python_ARQ import ARQ
+from ptbcontrib.postgres_persistence import PostgresPersistence
 
 StartTime = time.time()
 
+def get_user_list(__init__, key):
+    with open("{}/lunaBot/{}".format(os.getcwd(), __init__), "r") as json_file:
+        return json.load(json_file)[key]
+
+
 # enable logging
+FORMAT = "[SeiraRobot] %(message)s"
 logging.basicConfig(
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
     level=logging.INFO,
+    format=FORMAT,
+    datefmt="[%X]",
+)
+logging.getLogger("pyrogram").setLevel(logging.INFO)
+logging.getLogger("ptbcontrib.postgres_persistence.postgrespersistence").setLevel(
+    logging.WARNING
 )
 
-LOGGER = logging.getLogger(__name__)
+LOGGER = logging.getLogger("[SeiraRobot]")
+LOGGER.info(
+    "SeiraxRobot is starting. | An Seth Project Parts. | Licensed under GPLv3."
+)
+LOGGER.info("Not affiliated to Tantei Wa Mou or Villain in any way whatsoever.")
+LOGGER.info("Project maintained by: github.com/Dorimuhai (t.me/xyzsethhh)")
 
-# if version < 3.6, stop bot.
+# if version < 3.9, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 6:
     LOGGER.error(
         "You MUST have a python version of at least 3.6! Multiple features depend on this. Bot quitting."
     )
-    quit(1)
+    sys.exit(1)
 
 ENV = bool(os.environ.get("ENV", False))
 
@@ -43,23 +61,23 @@ if ENV:
     OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
 
     try:
-        DRAGONS = set(int(x) for x in os.environ.get("DRAGONS", "").split())
-        DEV_USERS = set(int(x) for x in os.environ.get("DEV_USERS", "").split())
+        DRAGONS = {int(x) for x in os.environ.get("DRAGONS", "").split()}
+        DEV_USERS = {int(x) for x in os.environ.get("DEV_USERS", "").split()}
     except ValueError:
         raise Exception("Your sudo or dev users list does not contain valid integers.")
 
     try:
-        DEMONS = set(int(x) for x in os.environ.get("DEMONS", "").split())
+        DEMONS = {int(x) for x in os.environ.get("DEMONS", "").split()}
     except ValueError:
         raise Exception("Your support users list does not contain valid integers.")
 
     try:
-        WOLVES = set(int(x) for x in os.environ.get("WOLVES", "").split())
+        WOLVES = {int(x) for x in os.environ.get("WOLVES", "").split()}
     except ValueError:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 
     try:
-        TIGERS = set(int(x) for x in os.environ.get("TIGERS", "").split())
+        TIGERS = {int(x) for x in os.environ.get("TIGERS", "").split()}
     except ValueError:
         raise Exception("Your tiger users list does not contain valid integers.")
 
@@ -73,7 +91,8 @@ if ENV:
     API_ID = os.environ.get("API_ID", None)
     API_HASH = os.environ.get("API_HASH", None)
     BOT_ID = int(os.environ.get("BOT_ID", None))
-    DB_URI = os.environ.get("DATABASE_URL")
+    DB_URL = os.environ.get("DATABASE_URL")
+    DB_URL = DB_URL.replace("postgres://", "postgresql://", 1)
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
     DONATION_LINK = os.environ.get("DONATION_LINK")
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
@@ -102,7 +121,7 @@ if ENV:
     BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
 
     try:
-        BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
+        BL_CHATS = {int(x) for x in os.environ.get("BL_CHATS", "").split()}
     except ValueError:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
@@ -120,23 +139,23 @@ else:
     OWNER_USERNAME = Config.OWNER_USERNAME
     ALLOW_CHATS = Config.ALLOW_CHATS
     try:
-        DRAGONS = set(int(x) for x in Config.DRAGONS or [])
-        DEV_USERS = set(int(x) for x in Config.DEV_USERS or [])
+        DRAGONS = {int(x) for x in Config.DRAGONS or []}
+        DEV_USERS = {int(x) for x in Config.DEV_USERS or []}
     except ValueError:
         raise Exception("Your sudo or dev users list does not contain valid integers.")
 
     try:
-        DEMONS = set(int(x) for x in Config.DEMONS or [])
+        DEMONS = {int(x) for x in Config.DEMONS or []}
     except ValueError:
         raise Exception("Your support users list does not contain valid integers.")
 
     try:
-        WOLVES = set(int(x) for x in Config.WOLVES or [])
+        WOLVES = {int(x) for x in Config.WOLVES or []}
     except ValueError:
         raise Exception("Your whitelisted users list does not contain valid integers.")
 
     try:
-        TIGERS = set(int(x) for x in Config.TIGERS or [])
+        TIGERS = {int(x) for x in Config.TIGERS or []}
     except ValueError:
         raise Exception("Your tiger users list does not contain valid integers.")
 
@@ -148,7 +167,7 @@ else:
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
 
-    DB_URI = Config.SQLALCHEMY_DATABASE_URI
+    DB_URL = Config.SQLALCHEMY_DATABASE_URL
     MONGO_DB_URI = Config.MONGO_DB_URI
     HEROKU_API_KEY = Config.HEROKU_API_KEY
     HEROKU_APP_NAME = Config.HEROKU_APP_NAME
@@ -210,6 +229,7 @@ print("[INFO]: INITIALZING AIOHTTP SESSION")
 aiohttpsession = ClientSession()
 print("[INFO]: INITIALIZING ARQ CLIENT")
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
+loop = asyncio.get_event_loop()
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
