@@ -31,12 +31,12 @@ def get_file_extension_from_url(url):
 def download_youtube_audio(url: str):
     global is_downloading
     with youtube_dl.YoutubeDL(
-        {
-            "format": "bestaudio",
-            "writethumbnail": True,
-            "quiet": True,
-        }
-    ) as ydl:
+            {
+                "format": "bestaudio",
+                "writethumbnail": True,
+                "quiet": True,
+            }
+        ) as ydl:
         info_dict = ydl.extract_info(url, download=False)
         if int(float(info_dict["duration"])) > 600:
             is_downloading = False
@@ -45,7 +45,7 @@ def download_youtube_audio(url: str):
         audio_file = ydl.prepare_filename(info_dict)
         basename = audio_file.rsplit(".", 1)[-2]
         if info_dict["ext"] == "webm":
-            audio_file_opus = basename + ".opus"
+            audio_file_opus = f'{basename}.opus'
             ffmpeg.input(audio_file).output(
                 audio_file_opus, codec="copy", loglevel="error"
             ).overwrite_output().run()

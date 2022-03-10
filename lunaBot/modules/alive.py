@@ -12,8 +12,7 @@ PHOTO = "https://telegra.ph/file/51c4e8b6b40cd0cb66cea.jpg"
 @MEMEK(pattern=("/alive"))
 async def awake(event):
   tai = event.sender.first_name
-  LUNA = "**Holla I'm Seira!** \n\n"
-  LUNA += "💎 **I'm Working Properly** \n\n"
+  LUNA = "**Holla I'm Seira!** \n\n" + "💎 **I'm Working Properly** \n\n"
   LUNA += "💎 **My Master : [ꜱᴇᴛʜ](https://t.me/xyzsethh)** \n\n"
   LUNA += f"💎 **Telethon Version : {tlhver}** \n\n"
   LUNA += f"💎 **Pyrogram Version : {pyrover}** \n\n"

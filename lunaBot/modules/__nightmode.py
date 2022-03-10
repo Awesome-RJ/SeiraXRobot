@@ -81,7 +81,7 @@ async def profanity(event):
     if event.is_private:
         return
     input = event.pattern_match.group(2)
-    if not event.sender_id == OWNER_ID:
+    if event.sender_id != OWNER_ID:
         if not await is_register_admin(event.input_chat, event.sender_id):
            await event.reply("Only admins can execute this command!")
            return
@@ -99,25 +99,23 @@ async def profanity(event):
             "Currently NightMode is Disabled for this Chat"
         )
         return
-    if "on" in input:
-        if event.is_group:
-            if is_nightmode_indb(str(event.chat_id)):
-                    await event.reply(
-                        "Night Mode is Already Turned ON for this Chat"
-                    )
-                    return
-            add_nightmode(str(event.chat_id))
-            await event.reply("NightMode turned on for this chat.")
+    if "on" in input and event.is_group:
+        if is_nightmode_indb(str(event.chat_id)):
+                await event.reply(
+                    "Night Mode is Already Turned ON for this Chat"
+                )
+                return
+        add_nightmode(str(event.chat_id))
+        await event.reply("NightMode turned on for this chat.")
     if "off" in input:
-        if event.is_group:
-            if not is_nightmode_indb(str(event.chat_id)):
-                    await event.reply(
-                        "Night Mode is Already Off for this Chat"
-                    )
-                    return
+        if event.is_group and not is_nightmode_indb(str(event.chat_id)):
+            await event.reply(
+                "Night Mode is Already Off for this Chat"
+            )
+            return
         rmnightmode(str(event.chat_id))
         await event.reply("NightMode Disabled!")
-    if not "off" in input and not "on" in input:
+    if "off" not in input and "on" not in input:
         await event.reply("Please Specify On or Off!")
         return
 

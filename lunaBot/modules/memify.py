@@ -25,18 +25,15 @@ async def handler(event):
     file = await bot.download_media(reply_message)
     msg = await event.reply("`Memifying this image! Please wait`")
 
-    if "Kittu" in Credit:
-       pass
-
-    else: 
-       await event.reply("this nigga removed credit line from code")
+    if "Kittu" not in Credit:
+        await event.reply("this nigga removed credit line from code")
     text = str(event.pattern_match.group(1)).strip()
 
     if len(text) < 1:
         return await msg.reply("You might want to try `/mmf text`")
     meme = await drawText(file, text)
-    await bot.send_file(event.chat_id, file=meme, force_document=False)   
-    await msg.delete()    
+    await bot.send_file(event.chat_id, file=meme, force_document=False)
+    await msg.delete()
     os.remove(meme)
 
 
@@ -49,10 +46,7 @@ async def drawText(image_path, text):
     os.remove(image_path)
     shadowcolor = "black"
     i_width, i_height = img.size
-    if os.name == "nt":
-        fnt = "ariel.ttf"
-    else:
-        fnt = "./lunaBot/logopom/Roboto-Medium.ttf"
+    fnt = "ariel.ttf" if os.name == "nt" else "./lunaBot/logopom/Roboto-Medium.ttf"
     m_font = ImageFont.truetype(fnt, int((70 / 640) * i_width))
     if ";" in text:
         upper_text, lower_text = text.split(";")
@@ -124,7 +118,7 @@ async def drawText(image_path, text):
                 xy=((i_width - u_width) / 2, i_height -
                     u_height - int((20 / 640) * i_width)),
                 text=l_text, font=m_font, fill=(255, 255, 255))
-            current_h += u_height + pad          
+            current_h += u_height + pad
     image_name = "memify.webp"
     webp_file = os.path.join(image_name)
     img.save(webp_file, "webp")

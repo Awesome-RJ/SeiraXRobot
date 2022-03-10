@@ -65,7 +65,7 @@ def get_readable_time(seconds: int) -> str:
     for x in range(len(time_list)):
         time_list[x] = str(time_list[x]) + time_suffix_list[x]
     if len(time_list) == 4:
-        ping_time += time_list.pop() + ", "
+        ping_time += f'{time_list.pop()}, '
 
     time_list.reverse()
     ping_time += ":".join(time_list)
@@ -391,195 +391,209 @@ def luna_about_callback(update, context):
 
     elif query.data == "luna_basichelp":
         query.message.edit_text(
-            text=f"**──「 Penggunaan Dasar 」──**"
-            f"\n\n1.) Pertama, tambahkan saya ke grup anda.\n"
-            f"2.) kemudian promosikan saya sebagai admin dan berikan semua izin kecuali admin anonim.\n"
-            f"3.) setelah mempromosikan saya, ketik /reload di grup untuk memperbarui daftar admin.\n"
-            f"4.) Tambahkan @seiramusicassisten ke grup anda.\n"
-            f"5.) nyalakan obrolan video terlebih dahulu sebelum mulai memutar musik.\n"
-            f"\n📌 jika userbot(@seiramusikassisten) tidak join voice chat, pastikan voice chat aktif,.",
+            text="**──「 Penggunaan Dasar 」──**",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                 [
-                    InlineKeyboardButton(text="📗 ᴅᴀsᴀʀ​ ", callback_data="luna_admin"),
-                    InlineKeyboardButton(text="📘 ᴠɪᴅᴇᴏ​ ", callback_data="luna_notes"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="📙 ᴀᴅᴍɪɴ​", callback_data="luna_support"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Back", callback_data="luna_back"),
-                 
-                 ]
+                    [
+                        InlineKeyboardButton(
+                            text="📗 ᴅᴀsᴀʀ​ ", callback_data="luna_admin"
+                        ),
+                        InlineKeyboardButton(
+                            text="📘 ᴠɪᴅᴇᴏ​ ", callback_data="luna_notes"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="📙 ᴀᴅᴍɪɴ​", callback_data="luna_support"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="Back", callback_data="luna_back"
+                        ),
+                    ],
                 ]
             ),
         )
+
     elif query.data == "luna_admin":
         query.message.edit_text(
-            text=f"**──「 Penggunaan Dasar 」──**"
-            f"\n/play (nama lagu) - memutar musik atau dari youtube"
-            f"\n/play (balas ke pesan audio) - memutar musik dari file audio."
-            f"\n/playlist - mainkan musik playlistmu atau playlist grup."
-            f"\n/lyrics (nama lagu) - mencari lirik lagu."
-            f"\n/song (nama lagu ) - mendownload lagu dari youtube.",
+            text="**──「 Penggunaan Dasar 」──**",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="luna_basichelp")]]
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="Back", callback_data="luna_basichelp"
+                        )
+                    ]
+                ]
             ),
         )
+
 
     elif query.data == "luna_notes":
         query.message.edit_text(
-            text=f"──「Video player 」──\n\n"
-            f"\n/vplay  (nama lagu / link YouTube) – play video stream via YouTube."
-            f"\n/vpause - Untuk pause musik/video yang sedang di putar (hanya admin)."
-            f"\n/vstop atau /end - untuk memberhentikan video yang sedang di putar."
-            f"\n/bhaks - check musik/video stream ping status."
-            f"\n/skip - untuk melompat ke video selanjutnya.",
+            text="──「Video player 」──\\n\\n",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="luna_basichelp")]]
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="Back", callback_data="luna_basichelp"
+                        )
+                    ]
+                ]
             ),
         )
+
     elif query.data == "luna_support":
         query.message.edit_text(
-            text=f"──「 Penggunaan Admin 」──\n"
-            f"\n/music on|off - untuk mengaktifkan atau menonaktifkan music player di grup anda"
-            f"\n/play - (nama lagu) / balas ke audio file "
-            f"\n/pause - pause musik yang sedang berputar"
-            f"\n/resume - melanjutkan musik yang Ter pause"
-            f"\n/skip - melewati ke lagu selanjutnya"
-            f"\n/end - stop musik yang sedang berputar",
+            text="──「 Penggunaan Admin 」──\\n",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
-                 [
-                    InlineKeyboardButton(text="Back", callback_data="luna_basichelp"),
-                 
-                 ]
+                    [
+                        InlineKeyboardButton(
+                            text="Back", callback_data="luna_basichelp"
+                        ),
+                    ]
                 ]
             ),
         )
+
     elif query.data == "luna_credit":
         query.message.edit_text(
-            text=f"<b> `Cʀᴇᴅɪᴛ Fᴏʀ Seira Dᴇᴠ's` </b>\n"
-            f"\nHᴇʀᴇ Sᴏᴍᴇ Dᴇᴠᴇʟᴏᴘᴇʀs Hᴇʟᴘɪɴɢ Iɴ Mᴀᴋɪɴɢ Tʜᴇ Seira",
+            text="<b> `Cʀᴇᴅɪᴛ Fᴏʀ Seira Dᴇᴠ's` </b>\\n",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
-                 [
-                    InlineKeyboardButton(text="Alina", url="https://t.me/rizexx"),
-                    InlineKeyboardButton(text="Nao", url="https://t.me/xgothboi"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Yui", url="https://t.me/Badboyanim"),
-                    InlineKeyboardButton(text="Luna", url="https://t.me/tdrki_1"),
-                    InlineKeyboardButton(text="Seira", url="https//t.me/xyzparvez"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Back", callback_data="luna_basichelp"),
-                 
-                 ]
+                    [
+                        InlineKeyboardButton(
+                            text="Alina", url="https://t.me/rizexx"
+                        ),
+                        InlineKeyboardButton(
+                            text="Nao", url="https://t.me/xgothboi"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="Yui", url="https://t.me/Badboyanim"
+                        ),
+                        InlineKeyboardButton(
+                            text="Luna", url="https://t.me/tdrki_1"
+                        ),
+                        InlineKeyboardButton(
+                            text="Seira", url="https//t.me/xyzparvez"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="Back", callback_data="luna_basichelp"
+                        ),
+                    ],
                 ]
             ),
         )
+
 
     elif query.data == "luna_aselole":
         query.message.edit_text(
-            text=f"｢ Penggunaan Dasar 」\n"
-                 f"\nAnda dapat menambahkan saya ke grup Anda dengan mengeklik tautan ini dan memilih obrolan.\n"
-                 f"\nBaca Izin Admin dan Anti-spam untuk info dasar.\n"
-                 f"\nBaca Panduan Penyiapan Terperinci untuk mempelajari tentang penyiapan bot secara mendetail. (Disarankan)\n"
-                 f"\nJika Anda membutuhkan bantuan dengan petunjuk lebih lanjut, silakan bertanya di @seirasupport.",
+            text="｢ Penggunaan Dasar 」\\n",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                 [
-                    InlineKeyboardButton(text="Perizinan Admin", callback_data="luna_asu"),
-                    InlineKeyboardButton(text="Anti Spam", callback_data="luna_asi"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Back", callback_data="luna_"),
-                 
-                 ]
+                    [
+                        InlineKeyboardButton(
+                            text="Perizinan Admin", callback_data="luna_asu"
+                        ),
+                        InlineKeyboardButton(
+                            text="Anti Spam", callback_data="luna_asi"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="Back", callback_data="luna_"
+                        ),
+                    ],
                 ]
             ),
         )
+
 
     elif query.data == "luna_asu":
         query.message.edit_text(
-            text=f"｢ Perizinan Admin 」\n"
-                     f"\nUntuk menghindari perlambatan, Seira menyimpan hak admin untuk setiap pengguna. Cache ini berlangsung sekitar 10 menit; ini dapat berubah di masa mendatang. Ini berarti bahwa jika Anda mempromosikan pengguna secara manual (tanpa menggunakan perintah /promote), Seira akan  cari tahu saja ~10 menit kemudian.\n"
-                     f"\nJika Anda ingin segera memperbaruinya, Anda dapat menggunakan perintah /admincache atau /reload, yang akan memaksa Seira untuk memeriksa lagi siapa adminnya dan izinnya\n"
-                     f"\nJika Anda mendapatkan pesan yang mengatakan:\nAnda harus menjadi administrator obrolan ini untuk melakukan tindakan ini!\n"
-                     f"\nIni tidak ada hubungannya dengan hak Seira; ini semua tentang izin ANDA sebagai admin. Seira menghormati izin admin; jika Anda tidak memiliki izin Larangan Pengguna sebagai admin telegram, Anda tidak akan dapat mencekal pengguna  dengan Seira. Demikian pula, untuk mengubah setelan seira, Anda harus memiliki izin Ubah info grup.\n"
-                     f"\nPesan tersebut dengan sangat jelas menyatakan bahwa Anda memerlukan hak-hak ini - bukan Seira.",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="luna_aselole")]]
-            ),
-        )
-
-    elif query.data == "luna_asi":
-        query.message.edit_text(
-            text=f"｢ Anti-Spam Settings 」\n"
-                     f"\nAntispam: "
-                      f"\nDengan mengaktifkan ini, Anda dapat melindungi grup Anda bebas dari scammer/spammer.\nJalankan /antispam di chat Anda untuk mengaktifkannya.\nSupport Chat: @seirasupport\n"
-                      f"\n✪ Anti-Spam memungkinkan Anda menjaga obrolan tetap bersih dari spam."
-                      f"\n✪ Dengan bantuan Blaclists, Anda dapat memasukkan kata, kalimat, dan stiker ke daftar hitam yang tidak ingin digunakan oleh anggota grup."
-                      f"\n✪ Dengan mengaktifkan Laporan, admin mendapatkan pemberitahuan saat pengguna melaporkan dalam obrolan."
-                      f"\n✪ Kunci memungkinkan Anda untuk mengunci/membatasi beberapa item perintah di dunia telegram."
-                      f"\n✪ Peringatan memungkinkan untuk memperingatkan pengguna dan mengatur peringatan otomatis. "
-                      f"\n✪ Welcome Mute membantu Anda mencegah spambot atau pengguna membanjiri/mengirim spam ke grup Anda. Periksa greeting untuk info lebih lanjut",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="luna_aselole")]]
-            ),
-        )
-
-    elif query.data == "luna_puqi":
-        query.message.edit_text(
-            text=f" ｢ Syarat dan ketentuan 」\n"
-                f"\nUntuk menggunakan bot ini, Anda harus menyetujui Persyaratan dan Ketentuan.\n"
-                 f"\n✪ Jika seseorang mengirim spam ke grup Anda, Anda dapat menggunakan fitur laporan dari Klien Telegram Anda."
-                 f"\n✪ Pastikan antiflood diaktifkan, sehingga pengguna tidak dapat membanjiri/spam chat Anda."
-                 f"\n✪ Jangan spam perintah, tombol, atau apa pun di bot PM, jika tidak Anda akan Diabaikan oleh bot atau Gbanned."
-                 f"\n✪ Jika Anda perlu menanyakan sesuatu tentang bot ini atau membutuhkan bantuan, hubungi kami di @seirasupport"
-                 f"\n✪ Pastikan Anda membaca aturan dan mengikutinya saat bergabung dengan Obrolan Dukungan."
-                 f"\n✪ Spamming di Support Chat, akan menghadiahi Anda GBAN dan dilaporkan ke Telegram juga.\n"
-                 f"\nSyarat & Ketentuan dapat diubah kapan saja.",
+            text="｢ Perizinan Admin 」\\n",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                  [
-                     InlineKeyboardButton(text="Credits", callback_data="luna_angjay"),
-                     InlineKeyboardButton(text="Back", callback_data="luna_"),
-                  ]
+                    [
+                        InlineKeyboardButton(
+                            text="Back", callback_data="luna_aselole"
+                        )
+                    ]
                 ]
             ),
         )
 
-    elif query.data == "luna_angjay":
+
+    elif query.data == "luna_asi":
         query.message.edit_text(
-            text=f"Seira adalah bot yang kuat untuk mengelola grup dengan fitur tambahan.\n"
-               f"\nLisensi Seira Di Bawah GNU (Lisensi Publik Umum v3.0)\n"
-               f"\nJika Anda memiliki pertanyaan tentang Seira,"
-               f"\nhubungi kami di Support Chat.",
+            text="｢ Anti-Spam Settings 」\\n",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                  [
-                     InlineKeyboardButton(text="Back", callback_data="luna_puqi"),
-                     InlineKeyboardButton(text="Support", url=f"https://t.me/seirasupport"),
-                  ]
+                    [
+                        InlineKeyboardButton(
+                            text="Back", callback_data="luna_aselole"
+                        )
+                    ]
+                ]
+            ),
+        )
+
+
+    elif query.data == "luna_puqi":
+        query.message.edit_text(
+            text=" ｢ Syarat dan ketentuan 」\\n",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="Credits", callback_data="luna_angjay"
+                        ),
+                        InlineKeyboardButton(
+                            text="Back", callback_data="luna_"
+                        ),
+                    ]
+                ]
+            ),
+        )
+
+
+    elif query.data == "luna_angjay":
+        query.message.edit_text(
+            text="Seira adalah bot yang kuat untuk mengelola grup dengan fitur tambahan.\\n",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="Back", callback_data="luna_puqi"
+                        ),
+                        InlineKeyboardButton(
+                            text="Support", url="https://t.me/seirasupport"
+                        ),
+                    ]
                 ]
             ),
         )   
@@ -694,25 +708,24 @@ def send_settings(chat_id, user_id, user=False):
                 parse_mode=ParseMode.MARKDOWN,
             )
 
+    elif CHAT_SETTINGS:
+        chat_name = dispatcher.bot.getChat(chat_id).title
+        dispatcher.bot.send_message(
+            user_id,
+            text="module mana yang ingin anda check {}'s settings for?".format(
+                chat_name
+            ),
+            reply_markup=InlineKeyboardMarkup(
+                paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)
+            ),
+        )
     else:
-        if CHAT_SETTINGS:
-            chat_name = dispatcher.bot.getChat(chat_id).title
-            dispatcher.bot.send_message(
-                user_id,
-                text="module mana yang ingin anda check {}'s settings for?".format(
-                    chat_name
-                ),
-                reply_markup=InlineKeyboardMarkup(
-                    paginate_modules(0, CHAT_SETTINGS, "stngs", chat=chat_id)
-                ),
-            )
-        else:
-            dispatcher.bot.send_message(
-                user_id,
-                "Seems like there aren't any chat settings available :'(\nSend this "
-                "in a group chat you're admin in to find its current settings!",
-                parse_mode=ParseMode.MARKDOWN,
-            )
+        dispatcher.bot.send_message(
+            user_id,
+            "Seems like there aren't any chat settings available :'(\nSend this "
+            "in a group chat you're admin in to find its current settings!",
+            parse_mode=ParseMode.MARKDOWN,
+        )
 
 
 def settings_button(update: Update, context: CallbackContext):
@@ -804,29 +817,28 @@ def get_settings(update: Update, context: CallbackContext):
     msg = update.effective_message  # type: Optional[Message]
 
     # ONLY send settings in PM
-    if chat.type != chat.PRIVATE:
-        if is_user_admin(chat, user.id):
-            text = "Click disini untuk mendapatkan chat's settings, Begitu juga milikmu."
-            msg.reply_text(
-                text,
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                text="Settings",
-                                url="t.me/{}?start=stngs_{}".format(
-                                    context.bot.username, chat.id
-                                ),
-                            )
-                        ]
-                    ]
-                ),
-            )
-        else:
-            text = "Click di sini untuk  check your settings."
-
-    else:
+    if chat.type == chat.PRIVATE:
         send_settings(chat.id, user.id, True)
+
+    elif is_user_admin(chat, user.id):
+        text = "Click disini untuk mendapatkan chat's settings, Begitu juga milikmu."
+        msg.reply_text(
+            text,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="Settings",
+                            url="t.me/{}?start=stngs_{}".format(
+                                context.bot.username, chat.id
+                            ),
+                        )
+                    ]
+                ]
+            ),
+        )
+    else:
+        text = "Click di sini untuk  check your settings."
 
 
 def donate(update: Update, context: CallbackContext):
@@ -935,16 +947,16 @@ def main():
         LOGGER.info("Using long polling.")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
-    if len(argv) not in (1, 3, 4):
-        telethn.disconnect()
-    else:
+    if len(argv) in {1, 3, 4}:
         telethn.run_until_disconnected()
 
+    else:
+        telethn.disconnect()
     updater.idle()
 
 
 if __name__ == "__main__":
-    LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
+    LOGGER.info(f"Successfully loaded modules: {str(ALL_MODULES)}")
     telethn.start(bot_token=TOKEN)
     pbot.start()
     main()

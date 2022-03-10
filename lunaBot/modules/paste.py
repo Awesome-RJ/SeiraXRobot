@@ -30,7 +30,7 @@ async def isPreviewUp(preview: str) -> bool:
         if status == 404 or (status == 200 and size == 0):
             await asyncio.sleep(0.4)
         else:
-            return True if status == 200 else False
+            return status == 200
     return False
 
 
@@ -57,7 +57,7 @@ async def paste_func(_, message):
             content = await f.read()
         os.remove(doc)
     link = await paste(content)
-    preview = link + "/preview.png"
+    preview = f'{link}/preview.png'
     button = InlineKeyboard(row_width=1)
     button.add(InlineKeyboardButton(text="Paste Link", url=link))
 

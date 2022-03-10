@@ -120,8 +120,7 @@ def flood_button(update: Update, context: CallbackContext):
     bot = context.bot
     query = update.callback_query
     user = update.effective_user
-    match = re.match(r"unmute_flooder\((.+?)\)", query.data)
-    if match:
+    if match := re.match(r"unmute_flooder\((.+?)\)", query.data):
         user_id = match.group(1)
         chat = update.effective_chat.id
         try:
@@ -261,25 +260,30 @@ def flood(update, context):
 
     limit = sql.get_flood_limit(chat_id)
     if limit == 0:
-        if conn:
-            text = msg.reply_text(
-                "Saya tidak menerapkan pengendalian anti-flood  di {}!".format(chat_name)
+        text = (
+            msg.reply_text(
+                "Saya tidak menerapkan pengendalian anti-flood  di {}!".format(
+                    chat_name
+                )
             )
-        else:
-            text = msg.reply_text("Saya tidak menerapkan pengendalian anti-flood di sini!")
+            if conn
+            else msg.reply_text(
+                "Saya tidak menerapkan pengendalian anti-flood di sini!"
+            )
+        )
+
+    elif conn:
+        text = msg.reply_text(
+            "Saat ini saya membatasi anggota setelah {} berurutan di  {}.".format(
+                limit, chat_name
+            )
+        )
     else:
-        if conn:
-            text = msg.reply_text(
-                "Saat ini saya membatasi anggota setelah {} berurutan di  {}.".format(
-                    limit, chat_name
-                )
+        text = msg.reply_text(
+            "Saat ini saya membatasi anggota setelah {} pesan berurutan.".format(
+                limit
             )
-        else:
-            text = msg.reply_text(
-                "Saat ini saya membatasi anggota setelah {} pesan berurutan.".format(
-                    limit
-                )
-            )
+        )
 
 
 @run_async

@@ -562,9 +562,13 @@ def adminlist(update, context):
         else:
             name = "{}".format(
                 mention_html(
-                    user.id, html.escape(user.first_name + " " + (user.last_name or ""))
+                    user.id,
+                    html.escape(
+                        f'{user.first_name} ' + ((user.last_name or ""))
+                    ),
                 )
             )
+
 
         if user.is_bot:
             bot_admin_list.append(name)
@@ -595,17 +599,19 @@ def adminlist(update, context):
         else:
             name = "{}".format(
                 mention_html(
-                    user.id, html.escape(user.first_name + " " + (user.last_name or ""))
+                    user.id,
+                    html.escape(
+                        f'{user.first_name} ' + ((user.last_name or ""))
+                    ),
                 )
             )
-        # if user.username:
-        #    name = escape_markdown("@" + user.username)
+
         if status == "administrator":
             if custom_title:
                 try:
                     custom_admin_list[custom_title].append(name)
                 except KeyError:
-                    custom_admin_list.update({custom_title: [name]})
+                    custom_admin_list[custom_title] = [name]
             else:
                 normal_admin_list.append(name)
 
